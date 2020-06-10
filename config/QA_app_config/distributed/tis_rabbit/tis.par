@@ -1,0 +1,252 @@
+# @(#)tis.par
+###############################################################################
+#
+# Parameters for tis_rabbit application, detpro pipeline, TI-detpro instance.
+#
+###############################################################################
+#
+role=TI-detpro
+
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+par=$(PARDIR)/idcdacs/ti.par
+
+# Queuing Flow
+#
+queue=xcmd.detpro.TisDetpro
+routing-key=DfxDetpro
+amqp-heartbeat=1800
+
+# Database constants
+#
+interval-class=$(interval-tis)
+timestamp-class=TIS
+
+networks="$(RABBIT_LIST)"
+default-chans="sz sn se bn be bz bhz bhe bhn shz she shn SHZ SHN SHE BHE BHN BHZ BH1 BH2 EHN EHE EHZ HHN HHE HHZ"
+
+# Interval creation
+#
+startup-lookback=345600
+lookback=345600
+query-time-limit=345600 #four days
+skip-period=100000
+# added startup-extent to queue intervals when more than 12 hours of data
+#  are missing.  (new problem with TI???)
+startup-extent=604800
+#
+make-skipped-intervals=1
+#
+min-data-required=0.95
+#
+max-interval-size=3600
+min-interval-size=600
+target-interval-size=600
+interval-snapto=600
+
+# time queries for start of new intervals
+#
+get-interval-times="SELECT name, max(endtime) endtime \
+	from interval where class = '$(interval-class)' \
+	and name in (%s) \
+        and endtime > %f group by name"
+
+#get-data-times="SELECT distinct t.time from timestamp t, \
+#	stanet s where t.procclass = 'DLTRIGGER' \
+#	and t.procname = s.net and s.sta in (%s)"
+
+get-data-times="SELECT distinct t.time-100 from idcx.timestamp t \
+	where t.procclass = 'DLTRIGGER' and t.procname in (%s)"
+
+
+# interval queries - skipped intervals
+#
+get-tis-intervals="SELECT * from interval \
+	where class = '$(interval-class)' \
+	and state = '$(skipped-state)'\
+	and name in (%s) \
+	and endtime > %.3f"
+
+# count wfdisc data in an interval
+#
+get-data="SELECT * from idcx.wfdisc w \
+	where chan in ($(alpha-chans)) \
+	and time between %.3f - $(max-wfdisc-duration) and %.3f \
+	and endtime > %.3f"
+
+H01W1-chans="EDH"
+H01W2-chans="EDH"
+H01W3-chans="EDH"
+H03N1-chans="EDH"
+H03N2-chans="EDH"
+H03N3-chans="EDH"
+H03S1-chans="EDH"
+H03S2-chans="EDH"
+H03S3-chans="EDH"
+H04N1-chans="EDH"
+H04N2-chans="EDH"
+H04N3-chans="EDH"
+H04S1-chans="EDH"
+H04S2-chans="EDH"
+H04S3-chans="EDH"
+H08N1-chans="EDH"
+H08N2-chans="EDH"
+H08N3-chans="EDH"
+H08S1-chans="EDH"
+H08S2-chans="EDH"
+H08S3-chans="EDH"
+H10N1-chans="EDH"
+H10N2-chans="EDH"
+H10N3-chans="EDH"
+H10S1-chans="EDH"
+H10S2-chans="EDH"
+H10S3-chans="EDH"
+H02N1-chans="HHZ"
+H02S1-chans="HHZ"
+H02S2-chans="HHZ"
+H05N1-chans="EHZ"
+H05S1-chans="EHZ"
+H06E1-chans="HHZ"
+H06N1-chans="HHZ"
+H06S1-chans="EHZ"
+H07N1-chans="EHZ"
+H07S1-chans="HHZ"
+H09N1-chans="EHZ"
+H09W1-chans="EHZ"
+H11N1-chans="EDH"
+H11N2-chans="EDH"
+H11N3-chans="EDH"
+H11S1-chans="EDH"
+H11S2-chans="EDH"
+H11S3-chans="EDH"
+#
+H08N1-max-interval-size=600
+H08N1-min-interval-size=600
+H08N1-target-interval-size=600
+H08N2-max-interval-size=600
+H08N2-min-interval-size=600
+H08N2-target-interval-size=600
+H08N3-max-interval-size=600
+H08N3-min-interval-size=600
+H08N3-target-interval-size=600
+H08S1-max-interval-size=600
+H08S1-min-interval-size=600
+H08S1-target-interval-size=600
+H08S2-max-interval-size=600
+H08S2-min-interval-size=600
+H08S2-target-interval-size=600
+H08S3-max-interval-size=600
+H08S3-min-interval-size=600
+H08S3-target-interval-size=600
+H01W1-max-interval-size=600
+H01W1-min-interval-size=600
+H01W1-target-interval-size=600
+H01W2-max-interval-size=600
+H01W2-min-interval-size=600
+H01W2-target-interval-size=600
+H01W3-max-interval-size=600
+H01W3-min-interval-size=600
+H01W3-target-interval-size=600
+H03N1-max-interval-size=600
+H03N1-min-interval-size=600
+H03N1-target-interval-size=600
+H03N2-max-interval-size=600
+H03N2-min-interval-size=600
+H03N2-target-interval-size=600
+H03N3-max-interval-size=600
+H03N3-min-interval-size=600
+H03N3-target-interval-size=600
+H03S1-max-interval-size=600
+H03S1-min-interval-size=600
+H03S1-target-interval-size=600
+H03S2-max-interval-size=600
+H03S2-min-interval-size=600
+H03S2-target-interval-size=600
+H03S3-max-interval-size=600
+H03S3-min-interval-size=600
+H03S3-target-interval-size=600
+H04N1-max-interval-size=600
+H04N1-min-interval-size=600
+H04N1-target-interval-size=600
+H04N2-max-interval-size=600
+H04N2-min-interval-size=600
+H04N2-target-interval-size=600
+H04N3-max-interval-size=600
+H04N3-min-interval-size=600
+H04N3-target-interval-size=600
+H04S1-max-interval-size=600
+H04S1-min-interval-size=600
+H04S1-target-interval-size=600
+H04S2-max-interval-size=600
+H04S2-min-interval-size=600
+H04S2-target-interval-size=600
+H04S3-max-interval-size=600
+H04S3-min-interval-size=600
+H04S3-target-interval-size=600
+H06E1-max-interval-size=600
+H06E1-min-interval-size=600
+H06E1-target-interval-size=600
+H06N1-max-interval-size=600
+H06N1-min-interval-size=600
+H06N1-target-interval-size=600
+H06S1-max-interval-size=600
+H06S1-min-interval-size=600
+H06S1-target-interval-size=600
+H07N1-max-interval-size=600
+H07N1-min-interval-size=600
+H07N1-target-interval-size=600
+H07S1-max-interval-size=600
+H07S1-min-interval-size=600
+H07S1-target-interval-size=600
+H10N1-max-interval-size=600
+H10N1-min-interval-size=600
+H10N1-target-interval-size=600
+H10N2-max-interval-size=600
+H10N2-min-interval-size=600
+H10N2-target-interval-size=600
+H10N3-max-interval-size=600
+H10N3-min-interval-size=600
+H10N3-target-interval-size=600
+H10S1-max-interval-size=600
+H10S1-min-interval-size=600
+H10S1-target-interval-size=600
+H10S2-max-interval-size=600
+H10S2-min-interval-size=600
+H10S2-target-interval-size=600
+H10S3-max-interval-size=600
+H10S3-min-interval-size=600
+H10S3-target-interval-size=600
+H09N1-max-interval-size=600
+H09N1-min-interval-size=600
+H09N1-target-interval-size=600
+H09W1-max-interval-size=600
+H09W1-min-interval-size=600
+H09W1-target-interval-size=600
+H02N1-max-interval-size=600
+H02N1-min-interval-size=600
+H02N1-target-interval-size=600
+H02S1-max-interval-size=600
+H02S1-min-interval-size=600
+H02S1-target-interval-size=600
+H02S2-max-interval-size=600
+H02S2-min-interval-size=600
+H02S2-target-interval-size=600
+H11N1-max-interval-size=600
+H11N1-min-interval-size=600
+H11N1-target-interval-size=600
+H11N2-max-interval-size=600
+H11N2-min-interval-size=600
+H11N2-target-interval-size=600
+H11N3-max-interval-size=600
+H11N3-min-interval-size=600
+H11N3-target-interval-size=600
+H11S1-max-interval-size=600
+H11S1-min-interval-size=600
+H11S1-target-interval-size=600
+H11S2-max-interval-size=600
+H11S2-min-interval-size=600
+H11S2-target-interval-size=600
+H11S3-max-interval-size=600
+H11S3-min-interval-size=600
+H11S3-target-interval-size=600
+

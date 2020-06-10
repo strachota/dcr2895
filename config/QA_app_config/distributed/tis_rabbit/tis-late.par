@@ -1,0 +1,27 @@
+# @(#)tis-late.par
+###############################################################################
+#
+# Parameters for tis_rabbit application, detpro pipeline, TI-late instance.
+#
+###############################################################################
+#
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+par=$(PARDIR)/tis_rabbit/tis.par
+
+role=TI-late
+par=$(PARDIR)/idcdacs/ti.par
+
+# Queuing flow
+#
+queue=xcmd.detpro.TisDetproLate
+routing-key=DfxCDetpro
+amqp-heartbeat=2700
+
+# Interval creation
+#
+make-new-intervals=0
+make-skipped-intervals=0
+skip-period=0
+# Set lookback to 6 days
+lookback=518400

@@ -1,0 +1,79 @@
+# @(#)tis-evsc.par
+###############################################################################
+#
+# Copyright 2015 Angewandte Wissenschaft Software und Technologie GmbH.
+#
+# Parameters for tis_rabbit application, evch pipeline, TI-evsc instance.
+#
+###############################################################################
+#
+role=TI-evsc
+
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+par=$(PARDIR)/idcdacs/ti.par
+
+# Queuing Flow
+#
+queue=xcmd.evch.TisEvsc
+routing-key=Evsc
+amqp-heartbeat=1800
+
+# Database constants
+#
+interval-class=PAR
+
+networks="'EVSC'"
+
+# Interval states
+#
+ready-state="done"
+
+# Interval creation
+#
+startup-lookback=1728000
+lookback=1728000
+skip-period=0
+
+make-new-intervals=1
+make-skipped-intervals=1
+
+max-interval-size=86400
+min-interval-size=86400
+target-interval-size=86400
+interval-snapto=86400
+startup-extent=1296000
+
+# time queries for start of new intervals
+#
+get-interval-times="SELECT name, NVL(max(endtime),0) endtime \
+	from interval where class = '$(interval-class)' \
+	and name = 'EVSC' group by name"
+
+get-data-times="SELECT max(endtime) time FROM interval \
+	where class = 'PAR' and name = 'EVCH' \
+	and state = '$(ready-state)'"
+
+# interval queries - skipped intervals
+#
+get-tis-intervals="SELECT * from interval \
+	where class = '$(interval-class)' \
+	and state = '$(skipped-state)' \
+	and name in (%s) \
+	and endtime > %.3f"
+
+# make intervals that do not look at wfdisc to decide they are
+# "skipped" or "queue"
+#
+min-data-required=0.99
+EVSC-minchans=1
+default-chans="XX"
+
+get-data="select $(networks) sta, '$(default-chans)' chan, i1.time, i2.endtime \
+ from interval i1, interval i2 \
+ where i1.class='PAR' and i1.name='EVCH' and i2.class='PAR' and i2.name='EVCH' \
+ and i1.endtime=%.3f + 4*3600 and i2.endtime=i1.time + 86400 \
+ and exists ( \
+  select i3.name from interval i3 where i3.class='PAR' and i3.name='EVCH' \
+  and state='done' and i3.endtime<%.3f + 1 and i3.endtime>%.3f + 1 \
+  group by i3.name having count(i3.name)=6)"

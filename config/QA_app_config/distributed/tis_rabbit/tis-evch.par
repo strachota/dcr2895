@@ -1,0 +1,75 @@
+# @(#)tis-evch.par
+###############################################################################
+#
+# Copyright 2015 Angewandte Wissenschaft Software und Technologie GmbH.
+#
+# Parameters for tis_rabbit application, evch pipeline, TI-evch instance.
+#
+###############################################################################
+#
+role=TI-evch
+
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+par=$(PARDIR)/idcdacs/ti.par
+
+# Queuing Flow
+#
+queue=xcmd.evch.TisEvch
+routing-key=DfxEvch
+amqp-heartbeat=1800
+
+# Database constants
+#
+interval-class=PAR
+
+networks="'EVCH'"
+
+# Interval states
+#
+ready-state="done"
+
+# Interval creation
+#
+startup-lookback=1728000
+lookback=1728000
+skip-period=0
+
+make-new-intervals=1
+make-skipped-intervals=1
+
+max-interval-size=14400
+min-interval-size=14400
+target-interval-size=14400
+interval-snapto=14400
+startup-extent=1296000
+
+# time queries for start of new intervals
+#
+get-interval-times="SELECT name, max(endtime) endtime \
+	from interval where class = '$(interval-class)' \
+	and name = 'EVCH' group by name"
+
+get-data-times="SELECT max(endtime) time FROM interval \
+	where class = 'PAR' and name = 'REB' \
+	and state = '$(ready-state)'"
+
+# interval queries - skipped intervals
+#
+get-tis-intervals="SELECT * from interval \
+	where class = '$(interval-class)' \
+	and state = '$(skipped-state)' \
+	and name in (%s) \
+	and endtime > %.3f"
+
+# make intervals that do not look at wfdisc to decide they are
+# "skipped" or "queue"
+#
+min-data-required=0.99
+EVCH-minchans=1
+default-chans="XX"
+
+get-data="select $(networks) sta, '$(default-chans)' chan, time, endtime \
+ from interval where ( %.3f between time and endtime or \
+ %.3f between time and endtime ) \
+ and class = 'PAR' and name = 'REB' and state='$(ready-state)'"

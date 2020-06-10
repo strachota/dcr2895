@@ -1,0 +1,44 @@
+# @(#)detpro/tortoise-StaPro.par
+###############################################################################
+#
+# Parameters for tortoise application, detpro pipeline, StaPro instance.
+#
+###############################################################################
+#
+role=StaPro
+prefix=$(role)
+
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+par=$(PARDIR)/idcdacs/tortoise.par
+
+# Queuing flow
+#
+queue=task.detpro.StaPro
+success-routing-key=Done
+amqp-heartbeat=1320
+
+# Interval states
+#
+interval-success-state="ready"
+
+# Child process
+#
+StaPro-exec=$(RELBIN)/StaPro
+
+StaPro[1]="sta=%name"
+StaPro[2]="start-time=%time"
+StaPro[3]="end-time=%endtime"
+StaPro[4]="par=$(AUTOMATIC-DIR)/StaPro/StaPro.par"
+
+StaPro-timeout=1200
+StaPro-true-exit=0,101
+
+StaPro-logfile=$(LOGDIR)/%jdate/$(role)/%name_VSEL
+StaPro-errfile=$(StaPro-logfile)
+
+# Start/stop hooks
+#
+stop-hook="$(RELBIN)/Sta_into_Dataready database=IDCXDB account=INITIAL \
+          station_name=%name start_time=%time end_time=%endtime \
+          add_lookback=1200 tz_diff=$(timezone-difference)"

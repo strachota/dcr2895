@@ -1,0 +1,9 @@
+#RabbitMQ Message Broker
+#
+RABBITMQ_HOST=amqp.idc.ctbto.org
+RABBITMQ_PORT=5672
+RABBITMQ_VHOST=/dcr2895
+RABBITMQ_USER=dcr2895_app
+RABBITMQ_PASS=XGm11Oz2jZU=
+
+par=$(CMS_CONFIG)/system_specs/shared.par

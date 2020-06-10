@@ -1,0 +1,53 @@
+# @(#)tis-recall.par
+###############################################################################
+#
+# Parameters for tis_rabbit application, recall pipeline, TI-recall instance.
+#
+###############################################################################
+#
+role=TI-recall
+
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+par=$(PARDIR)/idcdacs/ti.par
+
+# Queuing Flow
+#
+queue=xcmd.recall.TisRecall
+routing-key=DfxRecall
+amqp-heartbeat=1800
+
+# Database constants
+#
+interval-class=RCL
+timestamp-class=RECALL
+
+networks="'RECALL'"
+
+# Interval states
+#
+recall-ready-state="recall_ready"
+
+# Interval creation
+#
+startup-lookback=1728000
+lookback=1728000
+skip-period=0
+
+make-new-intervals=0
+make-skipped-intervals=0
+min-data-required=0.0
+
+# interval queries - recall_ready intervals
+#
+get-tis-intervals="SELECT * from interval \
+	where class = '$(interval-class)' \
+	and state = '$(recall-ready-state)' \
+	and name in (%s) \
+	and endtime > %.3f"
+
+# These pars must be set to make tis happy but are not used in this mode.
+#
+get-data-times="BOGUS STRING"
+get-data="BOGUS STRING"
+default-chans="bogus"

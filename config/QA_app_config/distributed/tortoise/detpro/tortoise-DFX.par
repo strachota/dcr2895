@@ -1,0 +1,34 @@
+# @(#)detpro/tortoise-DFX.par
+###############################################################################
+#
+# Parameters for tortoise application, detpro pipeline, DFX instance.
+#
+###############################################################################
+#
+role=DFX
+prefix=$(role)
+
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+par=$(PARDIR)/idcdacs/tortoise.par
+
+# Queuing flow
+#
+queue=task.detpro.Dfx
+success-routing-key=StaProDetpro
+amqp-heartbeat=1920
+
+# Child process
+#
+DFX-exec=$(RELBIN)/DFX
+
+DFX[1]="sta=%name"
+DFX[2]="start-time=%time"
+DFX[3]="end-time=%endtime"
+DFX[4]="par=$(DFXSPECS-DIR)/DFX-detection.par"
+
+DFX-timeout=1800
+DFX-true-exit=0,2,3
+
+DFX-logfile=$(LOGDIR)/%jdate/$(role)/%name-%host-%pid_VSEL
+DFX-errfile=$(DFX-logfile)

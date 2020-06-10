@@ -1,0 +1,43 @@
+# @(#)idcdacs/tortoise.par
+###############################################################################
+#
+# IDCDACS parameters common to all tortoise instances.
+#
+# The following parameters are required to be set before using this
+# file: role, prefix
+#
+###############################################################################
+#
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+
+# RabbitMQ Message Broker (MB) parameters
+#
+exchange=dacs4Exchange
+amqp-heartbeat=600
+channel=2
+
+# Default queuing flow
+#
+failed-routing-key=Failed
+db-routing-key=UpdateInterval
+
+# Default interval states
+#
+interval-start-state="$(prefix)-started"
+interval-retry-state="$(prefix)-retry"
+interval-success-state="$(prefix)-done"
+interval-failed-state="$(prefix)-failed"
+interval-timeout-state="timeout"
+
+done-detpro-state=ready
+done-sel1-state=done-sel1
+done-sel2-state=done-sel2
+done-sel3-state=done-sel3
+
+# Logging
+#
+child-verbose=2
+
+logfile=$(LOGDIR)/%jdate/tuxshell/$(role)-%host-%pid_DCR2895
+errfile=$(logfile)

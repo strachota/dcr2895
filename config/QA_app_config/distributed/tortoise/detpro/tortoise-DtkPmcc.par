@@ -1,0 +1,36 @@
+# @(#)detpro/tortoise-DtkPmcc.par
+###############################################################################
+#
+# Parameters for tortoise application, detpro pipeline, DtkPmcc instance.
+#
+###############################################################################
+#
+role=DtkPmcc
+prefix=$(role)
+
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+par=$(PARDIR)/idcdacs/tortoise.par
+
+# Queuing flow
+#
+queue=task.detpro.DtkPmcc
+success-routing-key=StaProDetpro
+amqp-heartbeat=1920
+
+# Child process
+#
+DtkPmcc-exec=$(RELBIN)/dtkpmcc
+
+DtkPmcc[1]="sta=%name"
+DtkPmcc[2]="st=%time"
+DtkPmcc[3]="et=%endtime"
+## to add to shared.par DTKSPECS-DIR
+#DtkPmcc[4]=$(DTKSPECS-DIR)
+DtkPmcc[4]="par=/git/cmss/dcr-2895/config/QA_app_config/automatic/DtkPmcc/%name-dtkpmcc.par"
+
+DtkPmcc-timeout=1800
+DtkPmcc-true-exit=0
+
+DtkPmcc-logfile=$(LOGDIR)/%jdate/$(role)/%name-%host-%pid_DCR2895
+DtkPmcc-errfile=$(DtkPmcc-logfile)

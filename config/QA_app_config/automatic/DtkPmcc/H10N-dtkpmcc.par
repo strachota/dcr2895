@@ -1,0 +1,10 @@
+#
+par=$(IMSPAR)
+par=$(AUTOMATIC-DIR)/DtkPmcc/DtkPmcc-hydro.par
+ThresholdNbSensors="3,3,3,3,3,3,3,3,3,3"
+# -------------SUBNETS PARAMETERS----------------
+StaList="H10N1,H10N2,H10N3"
+Channel="EDH"
+StaWeight="1,1,1"
+StaSum=""
+StaGroup="{H10N1,H10N2,H10N3}"

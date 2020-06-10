@@ -1,0 +1,272 @@
+# CCASEID: @(#) shared.par /main/R3_tst/devlan/6  04/01/2003
+# The following are site specific, this includes hard-coded path names
+# and site-specific variations due to varying configurations and/or
+# system requirements.
+#  
+###--- publicly available database accounts ---
+LOGGERDB=/@idcdev
+PUBLICDB=/@idcdev
+PUBLIC-ARCHDB=/@idcdev2
+# ARCHDB parameter not used on DevLAN
+# Commented out on June 26th 2008 by gwa to suppress error message in IADR
+# ARCHDB=
+PUBLICDB2=$(PUBLICDB)
+
+# The difference between SQL's "sysdate" and GMT, in days
+# Must be changed at the start and end of daylight savings time.
+#
+timezone-difference=0.0         # IDC processing runs as GMT
+
+operator=auto
+CMSS=cmss
+AUTO=auto
+
+MIGRATE_OPERATORS=auto
+domain=idc.ctbto.org
+data-center=CTBT_ITB
+SYSLOGROOT=ctbt
+
+# These parameters are truly shared and may be derived to some degree from
+# the site specific settings
+#
+## TBC
+GLOBAL_LAN=dvl
+#SQUAL related parameters
+lan=$(GLOBAL_LAN)
+DATABASE_VENDOR=oracle
+ODBC_CONNECT=development
+max-wfdisc-duration=14500
+extension_time=$(max-wfdisc-duration)
+# seln-delay: distance of endtime of new sel interval from real time
+sel1-delay=900
+sel1-lookback=900
+sel2-delay=11700
+sel2-lookback=900
+sel3-delay=18900
+sel3-lookback=900
+WE-lookback=2400
+Beamer-lookback=2400
+LOG_PURGE_LOOKBACK=15
+Notify-delay=3600
+
+# Delay in Bulletin production 
+#    Delay Bulletin production until most arrivals 
+#    are processed.  i.e. there is a problem because
+#    some phases propagate very slowly (infra and hydro).
+
+SEL1-Origin-Data-Delay=3600
+SEL2-Origin-Data-Delay=8400
+SEL3-Origin-Data-Delay=15600
+
+# Shared Directories
+
+SHI_DATADIR=/$(lan)/data/shi
+SHARED_DATADIR=/$(lan)/data/shared
+SHI_PRODUCTDIR=/$(lan)/products/shi
+
+BEAMDIR=$(SHI_DATADIR)/beams/DCR2895
+LOGDIR=/$(lan)/logs/shi
+AUXDIR=$(SHI_DATADIR)/aux
+REPORTDIR=$(SHI_PRODUCTDIR)/reports
+MSGDIR=$(SHARED_DATADIR)/messages
+
+TUXBASE_ANALYSIS=/var/tuxedo/IDC3_analysis
+QPATH=/var/tuxedo/IDC3_process
+QPATH_ANALYSIS=/var/tuxedo/IDC3_analysis
+XLOGGERDIR=$(REPORTDIR)/Xlogger
+
+# Shared Directories with derived paths
+#
+RELDIR=$(CMS_HOME)
+RELBIN=$(RELDIR)/bin
+STATICDIR=$(CMS_CONFIG)/earth_specs
+SQLDIR=$(CMS_CONFIG)/system_specs/sql
+GLOBALDIR=$(CMS_CONFIG)/system_specs
+SCRIPTSBIN=$(CMS_SCRIPTS)/bin
+
+# Archiving Directories with derived paths
+#
+SEGMENT_DIR=$(SHI_DATADIR)/segment
+SEGMENT_ARCHIVE=$(SEGMENT_DIR)/archive
+ARCDESTDIR=$(SEGMENT_DIR)/archive
+WAVEPLOT_DIR=$(SHI_PRODUCTDIR)/QTrace
+ARCHIVING_DIR=/archive/$(lan)
+# those below are not shared and could go into an archiver parfile
+ARCHIVE_WFARC_DIR=$(ARCHIVING_DIR)/waveforms
+ARCHIVE_FSARC_DIR=$(ARCHIVING_DIR)/frames
+ARCHIVE_SQUAL_DIR=$(ARCHIVING_DIR)/forever
+ARCHIVE_MSG_DIR=$(ARCHIVING_DIR)/messages
+ARCHIVE_TMARC_DIR=$(ARCHIVING_DIR)/reports
+
+# Travel time tables etc
+#
+#VMSF=$(STATICDIR)/TT/vmsf/idc.defs
+VMSF=$(STATICDIR)/TT/vmsf/rstt.defs
+VMSF_NO_SSSC=$(STATICDIR)/TT/vmsf/iasp91_only.defs
+dist_var_wgt=1
+ATTEN_DIR=$(STATICDIR)/MAG/atten
+ATTEN_PREFIX=$(ATTEN_DIR)/atten
+SASC_DIR_PREFIX=$(STATICDIR)/SASC/sasc
+sasc_dir_prefix=$(SASC_DIR_PREFIX)
+sasc-dir-prefix=$(SASC_DIR_PREFIX)
+
+TLSF=$(STATICDIR)/MAG/tlsf/idc_tlsf.defs
+MDF=$(STATICDIR)/MAG/mdf/idc_mdf.defs
+MDF_ARS=$(STATICDIR)/MAG/mdf/idc_mdf_ars.defs
+MDF_NO_COR=$(STATICDIR)/MAG/mdf/idc_mdf_no_cor.defs
+
+# StaPro neural network weights and bayes.tbl files.
+STAPRO_SITE_PATH=$(STATICDIR)/STAPRO
+GA_SITE_PATH=$(STATICDIR)/GA/
+GA_TEMP_ASSOC=assoc_temp_ga
+GA_TEMP_ORIGERR=origerr_temp_ga
+GA_TEMP_ORIGIN=origin_temp_ga
+GA_TEMP_ASSOC_INFRA=assoc_temp_ga_infra
+GA_TEMP_ORIGERR_INFRA=origerr_temp_ga_infra
+GA_TEMP_ORIGIN_INFRA=origin_temp_ga_infra
+
+# Parameters for Threshold Monitoring (TM)
+TM_SESSION=$(SHI_DATADIR)/tm_session/Linux_DCR2895
+TM_PRODDIR=$(SHI_PRODUCTDIR)/tm_DCR2895
+
+# Station Lists
+HYD_LIST="'H01W1','H01W2','H01W3','H03N1','H03N2','H03N3','H03S1','H03S2','H03S3','H04N1','H04N2','H04N3','H04S1','H04S2','H04S3','H08N1','H08N2','H08N3','H08S1','H08S2','H08S3','H10N1','H10N2','H10N3','H10S1','H10S2','H10S3','H11N1','H11N2','H11N3','H11S1','H11S2','H11S3'"
+DP_LIST="$(HYD_LIST)"
+####
+DTKPMCC_LIST="$(HYD_LIST)"
+RABBIT_LIST="$(HYD_LIST)"
+###
+# Auxiliary Station Lists
+GSE-list=""
+
+# Each subsystem has a fixed path to it.
+#
+       DFXSPECS-DIR=$(CMS_CONFIG)/app_config/DFX
+       DTKSPECS-DIR=$(CMS_CONFIG)/QA_app_config/automatic/DtkPmcc
+      AUTOMATIC-DIR=$(CMS_CONFIG)/app_config/automatic
+      QA_AUTOMATIC-DIR=$(CMS_CONFIG)/QA_app_config/automatic
+        ARCHIVE-DIR=$(CMS_CONFIG)/app_config/archive
+        CDTOOLS-DIR=$(CMS_CONFIG)/app_config/continuous_data/cdtools
+    DISTRIBUTED-DIR=$(CMS_CONFIG)/QA_app_config/distributed
+    QA_DISTRIBUTED-DIR=$(CMS_CONFIG)/QA_app_config/distributed
+    INTERACTIVE-DIR=$(CMS_CONFIG)/app_config/interactive
+       MESSAGES-DIR=$(CMS_CONFIG)/app_config/messages
+      MISCSPECS-DIR=$(CMS_CONFIG)/app_config/misc
+     MONITORING-DIR=$(CMS_CONFIG)/app_config/monitoring
+        STATION-DIR=$(CMS_CONFIG)/station_specs
+
+# The following define the subsystem specific par files
+#
+           DFXSPECS=$(CMS_CONFIG)/system_specs/DFX.par
+          AUTOMATIC=$(CMS_CONFIG)/system_specs/automatic.par
+        DISTRIBUTED=$(CMS_CONFIG)/system_specs/dacs.par
+       IDCDACSSPECS=$(CMS_CONFIG)/system_specs/idcdacs.par
+        INTERACTIVE=$(CMS_CONFIG)/system_specs/interactive.par
+           MESSAGES=$(CMS_CONFIG)/system_specs/msgs.par
+          MISCSPECS=$(CMS_CONFIG)/system_specs/miscspecs.par
+         MONITORING=$(CMS_CONFIG)/system_specs/monitoring.par
+
+#
+# Define DACS users
+#
+process-owner=auto
+AUTOUID=300002
+AUTOGID=1300
+analysis-owner=auto
+training-owner=auto
+
+# Machine configuration
+#
+# Git and aux 
+IDCHOST1=dlv001.idc.ctbto.org
+# pipeline primary and backup
+IDCHOST2=dlv014.idc.ctbto.org
+IDCHOST3=dlv025.idc.ctbto.org.
+IDCHOST4=dlv017.idc.ctbto.org
+# VDMS
+IDCHOST5=dlv018.idc.ctbto.org
+IDCHOST6=dlv019.idc.ctbto.org
+# SOH
+IDCHOST7=dlv112.idc.ctbto.org
+# ATM primary and backup
+IDCHOST8=dls001.idc.ctbto.org
+IDCHOST9=dls002.idc.ctbto.org
+# NETVISA
+IDCHOST10=dlv005.idc.ctbto.org
+
+# Map Process to Hosts
+
+# HOST descriptions
+#
+# TIHOST = TI's
+# SPHOST = Signal Processing
+# SCHOST = Signal Processing (Catch up)
+# GA1HOST = Global Association (sel1)
+# GA2HOST = Global Association (sel2)
+# GA3HOST = Global Association (sel3)
+# BMHOST = Origin Beam Generation
+# RQHOST = Request Subsystem
+# RCHOST = Recall Processing (after analysis, before rebdone)
+# PAHOST = Post-analysis processing (rebdone)
+# SAHOST = Segment Archive
+# EVHOST = Event Characterization/Screening
+# TMHOST = Threshold Monitor
+# HEHOST = Hydro Azimuth Estimation
+# FCHOST = Flow Control (DACS)
+# ARCHIVING
+# ARCHOST = Archive Host (Host of MSwriter)
+# MIGHOST = Migration
+# PRGHOST = Purge
+#
+# MESSAGE
+# MSGHOST = Message Subsystem
+# RNPHOST = Radionuclide processing
+#
+# SUBSCRIPTION
+# SUBHOST = Subscription Subsystem
+#
+# System Performance and loggin
+# LOGHOST = Application Logging
+# SPMHOST = System/Performance Monitoring
+#
+# WEB
+# WEBHOST = WEB Server
+#
+# ATM
+# ATMHOST = ATM related
+#
+# CDSHOST = CDTools (cdrecv+cdsend+cd2wng)
+# ACQHOST = VDMS ACQ
+#
+
+# IDCDACS related
+DACSHOST=$(IDCHOST3)
+
+# None IDCDACS
+#
+CDSHOST=$(IDCHOST3)
+ACQHOST=$(IDCHOST3)
+COPYHOST=$(IDCHOST3)
+MSGHOST=$(IDCHOST5)
+SUBHOST=$(IDCHOST5)
+RNPHOST=$(IDCHOST4)
+ATMHOST=$(IDCHOST8)
+
+#  to include all processing LAN hosts
+#auto-hosts="$(IDCDACS1) $(IDCDACS2) $(IDCDACS3) $(IDCDACS4) $(IDCDACS5) $(IDCDACS6) $(IDCDACS7) $(IDCDACS8) $(IDCDACS9) $(IDCDACS10)"
+
+### Set authentication certificates directory ###
+AUTH_BASEDIR=$(CMS_CONFIG)/system_specs/auth
+CERTS_DIR=$(AUTH_BASEDIR)/certs
+CADIR=$(AUTH_BASEDIR)/cacerts
+PVT_KEY_DIR=$(AUTH_BASEDIR)/pvt_keys
+MSG_AUTH_PAR=$(CMS_CONFIG)/system_specs/message_system_auth.par
+
+
+###  ARS specific
+# Prefix for 'static' tables, i.e. tables that are not expected to change.
+# In general these tables are in the schema `static`.
+#
+# Please note that the parameter really is a prefix not a SQL schema name, i.e.
+# the dot is needed if it should refere to a schema.
+ARS-static-table-prefix=static.

@@ -1,0 +1,38 @@
+#!/bin/bash 
+# 
+# Last updated 09 Oct 2015. Alexander Sudakov
+######################################################################################
+# keep alive to run Copy/Sync scripts (POOLDB -> IDCXDB)
+######################################################################################
+#
+GREP=/bin/grep         
+PS="/bin/ps aux"               # must support "-u" option
+LS=/bin/ls
+TEE=/usr/bin/tee
+HEAD=/usr/bin/head
+LOGGER=/usr/bin/logger
+MAIL=/bin/mailx
+OPERATOR="cmss"
+LOGFILE=/tmp/DCR-2895/`basename 0`.log.$$
+#
+cmss=`imspar auto`
+domainname=`imspar lan`
+prlist="CopyContData"
+#
+mask="user=strachot"
+#############################
+# Temporary solution, simple check and re-run when nothing found 
+for pr in ${prlist}
+do   
+   $PS | $GREP /dvl/software/shi/scripts/bin/${pr} | grep ${mask} ||  ($PS |  $GREP /dvl/software/shi/scripts/bin/${pr} >> $LOGFILE ; /dvl/software/shi/scripts/bin/${pr} par=/dvl/software/shi/scripts/par/${pr}.par user=auto  &)
+done
+#
+# notification to OPERATOR if needed
+if test -s $LOGFILE;  then
+   #$MAIL -s Please_check_acquistion $OPERATOR < $LOGFILE
+   #$LOGGER -i -p user.info -t ctbt.utility.`basename $0` < $LOGFILE
+fi
+# cleaning temporary log files
+test -e $LOGFILE && unlink $LOGFILE
+#
+exit

@@ -1,0 +1,17 @@
+# @(#)detpro/tortoise-DtkPmcc-late.par
+###############################################################################
+#
+# Parameters for tortoise application, detpro pipeline, DtkPmcc instance.
+#
+###############################################################################
+#
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+par=$(PARDIR)/tortoise/detpro/tortoise-DtkPmcc.par
+
+role=DtkPmcc-late
+par=$(PARDIR)/idcdacs/tortoise.par
+
+# Queuing flow
+#
+queue=task.detpro.DtkPmccLate

@@ -1,0 +1,104 @@
+# -------------GENERAL PARAMETERS----------------
+# ----- Parfile version -------------------------
+VersionPMCC="6.2.0"
+#
+MultithreadingMaxCPU=4
+#
+# ----- Input data (file/db) --------------------
+InputMode="db"
+# ----- Output data (file/db) -------------------
+OutputMode="db"
+# ----- Database parameters ---------------------
+database-vendor="QOCI"
+#database-account="dtkpmcc_app/XXXXXXXXX@:1521/IDCDEV"
+database-account="DCR2895_APP/3WkjJwTLHdc4@IDCDEV"
+database-nextidmethod="idcx.lastid"
+database-rootdirectory=""
+# ----- Input parameters ---------------------
+in-site-table="STATIC.SITE"
+in-DataFile=""
+# ----- Output parameters -----------------------
+out-FlagWriteBulletin="0"
+out-BulletinFile=""
+out-OutputDir="/dvl/data/shi/beams/DCR2895/DtkPmcc"
+out-DetPixFile="%yyyy/%mm/%dd/%sta_%etime.cdf"
+author="GPMCC"
+# ----- Database table name ---------------------
+in-sensor-table="STATIC.SENSOR"
+in-sitechan-table="STATIC.SITECHAN"
+in-affiliation-table="STATIC.AFFILIATION"
+in-instrument-table="STATIC.INSTRUMENT"
+in-wfdisc-table="IDCX.WFDISC"
+in-lastid-table="IDCX.LASTID"
+###Not used for the current setup - DCR-2895 commented out to stay on safe side
+#in-dervdisc-sequence="DERVDISC_DERVID"
+#in-arrival-sequence="ARRIVAL_ARID"
+#in-amplitude-sequence="AMPLITUDE_AMPID"
+#in-assoc-table="IDCX.ASSOC"
+#in-origin-table="IDCX.ORIGIN"
+#in-event-table="IDCX.EVENT"
+#in-sregion-table="IDCX.SREGION"
+#in-gregion-table="IDCX.GREGION"
+### DCR-2895 renamed idcx -> DCR2895 schema to stay on safe side, synonymes created to DCR2895 schema tables anyway for DCR2895_APP user
+### what about interval table!!!?
+out-arrival-table="DCR2895.ARRIVAL"
+out-detection-table="DCR2895.DETECTION"
+out-pmcc_features-table="DCR2895.PMCC_FEATURES"
+out-amplitude-table="DCR2895.AMPLITUDE"
+out-dervdisc-table="DCR2895.DERVDISC"
+# -----------------------------------------------
+ConfigurationType="1"
+# -----------------------------------------------
+VMinThirdOctave="0.3"
+MG1ThirdOctave="8"
+# -----------------------------------------------
+Fmin="1.000000000,1.600071053,2.560227376,4.096545714,6.554764215,10.488088482,16.781686784,26.851891249,42.964933914,68.746947064"
+Fmax="1.600071053,2.560227376,4.096545714,6.554764215,10.488088482,16.781686784,26.851891249,42.964933914,68.746947064,110.000000000"
+WindowLength="30,20.4859,14.5399,10.8238,8.5013,7.04982,6.14269,5.57576,5.22144,5"
+Overlap="90,90,90,90,90,90,90,90,90,90"
+ReSamplingRate="1,1,1,1,1,1,1,1,1,1"
+Filtertype="cheby,cheby,cheby,cheby,cheby,cheby,cheby,cheby,cheby,cheby"
+Order="2,2,2,2,2,2,2,2,2,2"
+Ripple="0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01"
+# -------------DETECTION PARAMETERS--------------
+# ----- Non Frequency-dependent parameters ------
+Flagshift="0"
+Shift_speed="0"
+Shift_azimuth="0"
+NbSubNet="3"
+FlagPreproc="0"
+FlagDeconvolution="0"
+FlagPMCC3D="0"
+SoundSpeed="1.45"
+kmax_3D="5"
+kmin_3D="-5"
+dk_3D="100"
+std_v="0"
+Interpolated_data_gaps="0.5"
+Compute_fstat="0"
+Parabolic_interpolation="1"
+# ----- Frequency-dependent parameters ----------
+Qlambda="50,50,50,50,50,50,50,50,50,50"
+ThresholdConsistency="0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1"
+VstoreMinPix="1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0"
+# -------------FAMILY PARAMETERS-----------------
+# ----- Non Frequency-dependent parameters ------
+GroupingAlgo="dist"
+Speed_transition="2"
+ComputeArrivalParameters="1"
+TSTA="2"
+TLTA="10"
+ThreshSTALTA="4"
+NLISS="10"
+PowPond="0.5"
+ThresholdLFamMin="5"
+ThresholdLFamMax="3000"
+ThresholdDistance="1"
+# ----- Frequency-dependent parameters ----------
+Time_tol="300,300,300,300,300,300,300,300,300,300"
+Freq_tol="5,5,5,5,5,5,5,5,5,5"
+Fstat_tol="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+Az_tol1="10,10,10,10,10,10,10,10,10,10"
+Sp_tol1="20,20,20,20,20,20,20,20,20,20"
+Az_tol2="10,10,10,10,10,10,10,10,10,10"
+Sp_tol2="20,20,20,20,20,20,20,20,20,20"

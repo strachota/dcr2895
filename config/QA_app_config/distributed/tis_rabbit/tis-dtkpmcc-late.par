@@ -1,0 +1,27 @@
+# @(#)tis-dtkpmcc-late.par
+###############################################################################
+#
+# Parameters for tis_rabbit application, TI-dtkpmcc-late instance.
+#
+###############################################################################
+#
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+par=$(PARDIR)/tis_rabbit/tis-dtkpmcc.par
+
+role=TI-dtkpmcc-late
+par=$(PARDIR)/idcdacs/ti.par
+
+# Queuing flow
+#
+queue=xcmd.detpro.TisDtkPmccLate
+routing-key=DtkPmccLate
+amqp-heartbeat=2700
+
+# Interval creation
+#
+make-new-intervals=0
+make-skipped-intervals=0
+skip-period=0
+# Set lookback to 6 days
+lookback=518400

@@ -1,0 +1,16 @@
+# @(#)detpro/tortoise-DFX-C.par
+###############################################################################
+#
+# Parameters for tortoise application, detpro pipeline, DFX-C instance.
+#
+###############################################################################
+#
+par=$(IMSPAR)
+par=$(IDCDACSSPECS)
+par=$(PARDIR)/tortoise/detpro/tortoise-DFX.par
+
+role=DFX-C
+par=$(PARDIR)/idcdacs/tortoise.par
+
+# Override queue to listen on
+queue=task.detpro.DfxC
