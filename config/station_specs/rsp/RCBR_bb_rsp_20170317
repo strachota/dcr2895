@@ -1,0 +1,102 @@
+# Displacement response for RCBR, Riachuelo, broad-band channnels
+# 
+# Seismometer type = CMG-3TB
+# Digitiser type = Quanterra Q-330HR
+# Data sample rate = 40 s/s
+#
+# One zero has been added to convert velocity to displacement,
+# and two zeros have been added to convert acceleration to displacement. 
+# Some zeros and poles are averaged as they have different values per channel. 
+# Poles and zeros are taken from spec. sheet of CMG-3TB S/N T37565.
+# Following comments are extracted for reference purpose.
+#----------------------------------------------------
+# The sensitivity of the channel is  32.8598 count/(nm/s)
+#   at frequency of 1.0 Hz 
+# 
+#  stage-1 
+#     Response type:                    	A [Laplace Transform (Rad/sec)
+#     Response in units lookup:              	M/S
+#     Response out units lookup:             	V
+#     A0 normalization factor:               	432298245920
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	1.958600E+04
+#     Frequency of sensitivity:              	1.000000E+00
+#
+#  stage-2
+#     Response type:                         	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	V
+#     Response out units lookup:             	COUNTS
+#     A0 normalization factor:               	1
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	1.677720E+06
+#     Frequency of sensitivity:              	1.000000E+01
+# 
+#  stage-3  
+#     Response type:                         	D
+#     Response in units lookup:              	COUNTS
+#     Response out units lookup:             	COUNTS
+#     Response decimation factor:            	1
+#     Response decimation offset:           	0
+#     Response delay:                       	4.304600E-01
+#     Response correction:                  	4.304600E-01
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:              	0.000000E+00
+# 
+# 
+#---------------------------------------------------- 
+ theoretical  1  instrument   paz
+432298245920
+6
+-0.03701	0.03701	0.00E+00	0.00E+00
+-0.03701   -0.03701	0.00E+00	0.00E+00
+-188.8279   195.5396	0.00E+00	0.00E+00
+-188.8279  -195.5396	0.00E+00	0.00E+00
+-259.2216   719.6446	0.00E+00	0.00E+00
+-259.2216  -719.6446	0.00E+00	0.00E+00 
+3
+0.00E+00 	0.00E+00 	0.00E+00 	0.00E+00
+0.00E+00 	0.00E+00 	0.00E+00 	0.00E+00
+0.00E+00 	0.00E+00 	0.00E+00 	0.00E+00
+ theoretical  3    digitizer    fir                     
+40
+39
+4.1895179E-13 0
+3.3031761E-04 0
+1.0292126E-03 0
+-3.1412280E-03 0
+2.0570927E-04 0
+1.5252131E-03 0
+-6.2319267E-03 0
+1.0480133E-02 0
+-1.3120247E-02 0
+1.0782143E-02 0
+-1.4445500E-03 0
+-1.5872946E-02 0
+3.9507404E-02 0
+-6.5103630E-02 0
+8.5371559E-02 0
+-8.9191342E-02 0
+5.0061889E-02 0
+8.3723276E-01 0
+2.6672305E-01 0
+-1.6669311E-01 0
+9.5283986E-02 0
+-5.0921772E-02 0
+1.6145837E-02 0
+7.0636240E-03 0
+-1.8387713E-02 0
+1.9941410E-02 0
+-1.5489507E-02 0
+8.5273541E-03 0
+-2.5578868E-03 0
+-1.8110264E-03 0
+2.4264926E-03 0
+-3.7576946E-03 0
+4.6729273E-04 0
+6.3307212E-04 0
+-1.5687414E-06 0
+-1.2547978E-05 0
+3.2104054E-07 0
+-2.6332410E-08 0
+-5.0999748E-08 0
+0

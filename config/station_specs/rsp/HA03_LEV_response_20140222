@@ -1,0 +1,13 @@
+# Terminal Sensitivity Response for Juan Fernandez Island HA03
+# Channel H03C1 and C2 /LEV
+# Shore Facility / DDFI
+# Effective: 22 February 2014
+# File name: H03 LEV response 20140222
+# Source: Mario Zampolli, Clarification MariPro 20140129
+# System response: MariPro Current Cable System
+# The following response file for Cable Voltage Sensor
+# is in frequency (Hz)/ amplitude (gain factor)/phase (deg) format 
+# Current response rel to 0.062 V/count @ 1 Hz
+ theoretical  0   instrument    fap 
+1
+1.00	1.00000	0.00000	0.0	0.0

@@ -1,0 +1,20 @@
+#
+# Displacement response for PPT broad-band horizontal channels count/nm
+#
+# DASE LPHA-12s
+#
+#nominal calibration 0.4024 nm/count  at 20.0 s
+#
+ theoretical  0   instrument    paz
+1.488272E+08
+6
+-4.66170E+02	-4.75580E+02	0.0	0.0
+-4.66170E+02	4.75580E+02	0.0	0.0
+-4.54000E+00	-4.43000E+00	0.0	0.0
+-4.54000E+00	4.43000E+00	0.0	0.0
+-0.10470E+00	0.0		0.0	0.0
+-6.30000E-03	0.0		0.0	0.0
+3
+0.0		0.0		0.0	0.0
+0.0		0.0		0.0	0.0
+0.0		0.0		0.0	0.0

@@ -1,0 +1,61 @@
+# Instrument response: channel I59H1_BDF
+#
+# Transfer Function for Chaparral 5 Low Gain Infrasound Sensor
+#
+# Derived from "The Design and Operation of Infrasonic Microphones"
+# by J. Paul Mutschlecner and Rodney W. Whitaker of LANL
+# Revised by M. Garces on 08/28/00
+# Does not include wind-noise-reducing filter response at I59US
+# Includes revisions published in 2000 Seismic Symposium
+# "Infrasound Sensor Models and Evaluation", by Kromer and McDonald
+#
+# Chaparral 5 Low Gain s.n.1326
+#
+#   Ncalib = 0.0000177301  Pa/count     Ncalper = 2.0 sec
+#
+#     source  	sequence   description  type   	 source of
+#               number				information
+    theoretical    1 	 microbarometer paz        LANL
+0.10774
+3
+-0.06692    0.00000    0.00000    0.00000
+-0.06640    0.00000    0.00000    0.00000
+-0.00817    0.00000    0.00000    0.00000
+3
+ 0.00000    0.00000    0.00000    0.00000 
+ 0.00000    0.00000    0.00000    0.00000   
+-0.03100    0.00000    0.00000    0.00000 
+#
+#
+# AIM24 DIGITIZER 
+#
+# AIM24 digitizer response based on information 
+# provided by SHI, s.n.2127
+# Measured response: frequency-amplitude-phase table (18 points)
+#
+#   Ncalib = 0.0000177301  Pa/count     Ncalper = 2.0 sec
+#
+#   Digitizer sensitivity = 5.23544000E+05 counts/volt
+#
+#
+#    source     sequence description  type     source of 
+#               number                        information
+   measured  	  2    	 digitizer    fap     	SHI
+17
+    0.000001    1.0000    	0.0000         	0         0
+    0.010000    1.0000  	0.0000         	0         0
+    0.020000    1.0000  	0.0000         	0         0         
+    0.080000    1.0000   	0.0000         	0         0
+    0.100000    1.0000   	0.0000         	0         0
+    0.200000    1.0000   	0.0000         	0         0
+    0.400000    1.0000   	0.0000         	0         0
+    0.800000    1.0000         -0.0057         	0         0
+    1.000000    1.0000         -0.0057         	0         0
+    2.000000    0.9988         -0.0115         	0         0
+    4.000000    0.9971         -0.0229         	0         0
+    5.000000    0.9954         -0.0286         	0         0
+    6.000000    0.9948         -0.0344         	0         0
+    7.000000    0.9925         -0.0401         	0         0
+    8.000000    0.8024         -0.0458         	0         0
+    9.000000    0.0013 	       -0.0516          0         0
+   10.000000    0.0000 	       -0.0573          0         0

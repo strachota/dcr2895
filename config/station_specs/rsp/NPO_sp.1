@@ -1,0 +1,29 @@
+#
+# Seismometer response for NPO GS-13  13Jan95
+#
+# Net system response is flat to velocity from 1 Hz (-2.5 dB)
+# to 10 Hz (-2.5 db).
+#
+# Poles derived from the following:
+# Seismometer loop, free period 1Hz, damping 0.75
+# Single pole (1st order) low pass filter @ 9.67 Hz in amplifier (Model 0105)
+# Digital anti-alias filters in RDAS-200P
+# Single pole digital high pass filter in RDAS-200P w/corner@ 0.0033 Hz
+#
+# Calib=0.006732 nm/count @ 1 Hz
+#
+# modified for displacement w/additional zero
+#
+ theoretical  0   system        paz DSS VSS Users Guide
+1.445954e10
+6
+-4.38         4.18 0.000000 0.000000
+-4.38        -4.18 0.000000 0.000000
+-60.7       0.0000 0.000000 0.000000
+-122.0    394.0000 0.000000 0.000000
+-122.0   -394.0000 0.000000 0.000000
+-1.33e3     0.0000 0.000000 0.000000
+3
+0 0 0.000000 0.000000
+0 0 0.000000 0.000000
+0 0 0.000000 0.000000

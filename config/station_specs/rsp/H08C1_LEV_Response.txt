@@ -1,0 +1,13 @@
+# Terminal Sensitivity Response for BIOT H08N
+# Channel H08C1/LEV
+# Shore Facility / DASS / DDFI
+# Effective: 12 July 2004
+# File name: H08C1_LEV_Response.txt
+# Source: John Newton
+# System response: SAIC Cable Voltage Sensor
+# The following response file for Cable Current Sensor
+# is in frequency (Hz)/ amplitude (gain factor)/phase (deg) format 
+# Current response rel to 0.5882 volts/count @ 1 Hz
+ theoretical  0   instrument    fap 
+1
+1.00	1.00000	0.00000	0.0	0.0

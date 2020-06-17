@@ -1,0 +1,51 @@
+# Displacement response for Muntele Rosu broad-band channnels
+# 
+# Seismometer type       = STS2
+# Data sample rate       = 40 s/s
+#
+#  This response file is converted from SEED format 
+#  instrument response. 
+# One zero has been added to convert velocity to displacement,
+#  and two zeros have been added to convert acceleration to displacement. 
+#
+# Following comments are extracted from SEED file for
+#   reference propose.
+#----------------------------------------------------
+# The sensitivity of the channel is  0.630 count/(nm/s)
+#   at frequency of 1.000000E+00 
+# 
+#  stage-1  
+#     Response type:                    	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	M/S - (null)
+#     Response out units lookup:             	V - (null)
+#     A0 normalization factor:               	1
+#     Normalization frequency:               	1
+#     Sensitivity:                           	1.500000E+03
+#     Frequency of sensitivity:              	1.000000E+00
+# 
+#----------------------------------------------------
+# 
+#  stage-1 
+# 
+ theoretical  1   instrument    paz   
+3.4684e+17 
+11 
+-13300	0	0	0
+-10530	10050	0	0
+-10530	-10050	0	0
+-520.3	0	0	0
+-374.8	0	0	0
+-97.34	-400.7	0	0
+-97.34	400.7	0	0
+-15.64	0	0	0
+-0.037	0.037	0	0
+-0.037	-0.037	0	0
+-255.097	0	0	0
+7 
+-463.1	-430.5 	0 	0
+-463.1	430.5 	0 	0
+-176.6	0	0 	0
+-15.15	0	0	0
+0	0	0	0
+0	0	0	0
+0	0 	0	0

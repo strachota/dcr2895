@@ -1,0 +1,17 @@
+# CCASEID: @(#) DAVOS.par /main/R3_tst/2  08/09/2002
+# %W% %G%
+
+# For DFX
+#
+NetType=ss
+StaType=3c
+amp3c-sta=$(sta)
+amp3c-chan-list="'SHZ','SHE','SHN'"
+
+#  For DFX-evch used in splp computations
+BandType1=s
+BandType3=s
+
+tf-vert-chan=SHZ
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=SHZ,SHN,SHE

@@ -1,0 +1,216 @@
+# Displacement response for YBH high  broad-band channnels
+# 
+# Seismometer type	= Streckeisen  STS-2
+# Digitiser		= Quanterra Q680
+# Data sample rate	= 80 s/s
+#
+#  This response file is converted from SEED format 
+#  instrument response. 
+#  One zero has been added to convert velocity to displacement,
+#  and two zeros have been added to convert acceleration to displacement. 
+#
+#  The following comments have been extracted from the SEED file for
+#  reference purposes.
+#----------------------------------------------------
+# The sensitivity of the channel is 8.106 counts/(nm/s)
+#   at frequency of 0.12 Hz
+# 
+#  stage-1  
+#     Response type:                    	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	M/S - (null)
+#     Response out units lookup:             	V - (null)
+#     A0 normalization factor:               	4.86185E+07
+#     Normalization frequency:               	1.200000E-01
+#     Sensitivity:                           	2.000250E+04
+#     Frequency of sensitivity:              	1.200000E-01
+#
+#  stage-2  
+#     Response type:                         	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	V
+#     Response out units lookup:             	COUNTS
+#     Response decimation factor:            	1.0
+#     Response decimation offset:           	0.000000E+00
+#     Response delay:                       	0.000000E+00
+#     Response correction:                  	0.000000E+00
+#     Sensitivity:                           	4.082867E+05
+#     Frequency of sensitivity:              	1.200000E-01
+# 
+#  stage-3  
+#     Response type:                       	D
+#     Response in units lookup:             	COUNTS
+#     Response out units lookup:            	COUNTS
+#     Response decimation factor:            	16
+#     Response decimation offset:           	0.000000E+00
+#     Response delay:                        	6.152000E-03
+#     Response correction:                   	-6.250000E-03
+#     Sensitivity:                      	1.014770E+00
+#     Frequency of sensitivity:              	1.000000E+01
+# 
+#  stage-4  
+#     Response type:               		D
+#     Response in units lookup:              	COUNTS
+#     Response out units lookup:             	COUNTS
+#     Response decimation factor:           	4
+#     Response decimation offset:            	0.000000E+00
+#     Response delay:                        	9.861100E-02
+#     Response correction:                   	-1.000000E-01
+#     Sensitivity:                   		9.781120E-01
+#     Frequency of sensitivity:              	1.000000E+01
+# 
+#----------------------------------------------------
+ theoretical  1  instrument   paz
+4.86185E+07
+5			
+-3.702370E-02	3.702440E-02	0.00E+00	0.00E+00
+-3.702370E-02	-3.702440E-02	0.00E+00	0.00E+00
+-1.187520E+02	4.234880E+02	0.00E+00	0.00E+00
+-1.187520E+02	-4.234880E+02	0.00E+00	0.00E+00
+-2.513270E+02	0.00E+00		0.00E+00	0.00E+00
+3
+0.00E+00	0.00E+00	0.00E+00	0.00E+00
+0.00E+00	0.00E+00	0.00E+00	0.00E+00
+0.00E+00	0.00E+00	0.00E+00	0.00E+00
+ theoretical  3    digitizer    fir
+5120
+64
+-1.113281E-03	0.00E+00
+-1.008002E-03	0.00E+00
+-1.352861E-03	0.00E+00
+-1.730454E-03	0.00E+00
+-2.084180E-03	0.00E+00
+-2.385377E-03	0.00E+00
+-2.609556E-03	0.00E+00
+-2.733523E-03	0.00E+00
+-2.733162E-03	0.00E+00
+-2.584724E-03	0.00E+00
+-2.264117E-03	0.00E+00
+-1.748468E-03	0.00E+00
+-1.014033E-03	0.00E+00
+-3.516817E-05	0.00E+00
+1.237820E-03	0.00E+00
+3.159832E-03	0.00E+00
+6.999450E-03	0.00E+00
+9.099599E-03	0.00E+00
+1.254236E-02	0.00E+00
+1.631230E-02	0.00E+00
+2.026324E-02	0.00E+00
+2.431726E-02	0.00E+00
+2.840511E-02	0.00E+00
+3.246041E-02	0.00E+00
+3.641428E-02	0.00E+00
+4.019874E-02	0.00E+00
+4.374505E-02	0.00E+00
+4.698733E-02	0.00E+00
+4.985729E-02	0.00E+00
+5.227957E-02	0.00E+00
+5.411396E-02	0.00E+00
+5.439028E-02	0.00E+00
+5.439028E-02	0.00E+00
+5.411396E-02	0.00E+00
+5.227957E-02	0.00E+00
+4.985729E-02	0.00E+00
+4.698733E-02	0.00E+00
+4.374505E-02	0.00E+00
+4.019874E-02	0.00E+00
+3.641428E-02	0.00E+00
+3.246041E-02	0.00E+00
+2.840511E-02	0.00E+00
+2.431726E-02	0.00E+00
+2.026324E-02	0.00E+00
+1.631230E-02	0.00E+00
+1.254236E-02	0.00E+00
+9.099599E-03	0.00E+00
+6.999450E-03	0.00E+00
+3.159832E-03	0.00E+00
+1.237820E-03	0.00E+00
+-3.516817E-05	0.00E+00
+-1.014033E-03	0.00E+00
+-1.748468E-03	0.00E+00
+-2.264117E-03	0.00E+00
+-2.584724E-03	0.00E+00
+-2.733162E-03	0.00E+00
+-2.733523E-03	0.00E+00
+-2.609556E-03	0.00E+00
+-2.385377E-03	0.00E+00
+-2.084180E-03	0.00E+00
+-1.730454E-03	0.00E+00
+-1.352861E-03	0.00E+00
+-1.008002E-03	0.00E+00
+-1.113281E-03	0.00E+00
+0
+ theoretical  4    digitizer    fir
+320
+72
+1.504873E-04	0.00E+00
+3.059242E-04	0.00E+00
+4.429487E-04	0.00E+00
+3.871174E-04	0.00E+00
+-4.737869E-05	0.00E+00
+-9.707718E-04	0.00E+00
+-2.303171E-03	0.00E+00
+-3.706377E-03	0.00E+00
+-4.625047E-03	0.00E+00
+-4.464801E-03	0.00E+00
+-2.869845E-03	0.00E+00
+7.008609E-06	0.00E+00
+3.385199E-03	0.00E+00
+6.003528E-03	0.00E+00
+6.550936E-03	0.00E+00
+4.259952E-03	0.00E+00
+-5.760239E-04	0.00E+00
+-6.434164E-03	0.00E+00
+-1.092138E-02	0.00E+00
+-1.163641E-02	0.00E+00
+-7.265152E-03	0.00E+00
+1.537275E-03	0.00E+00
+1.193310E-02	0.00E+00
+1.961570E-02	0.00E+00
+2.035163E-02	0.00E+00
+1.186803E-02	0.00E+00
+-4.643690E-03	0.00E+00
+-2.411254E-02	0.00E+00
+-3.863829E-02	0.00E+00
+-3.984992E-02	0.00E+00
+-2.186839E-02	0.00E+00
+1.616123E-02	0.00E+00
+6.896236E-02	0.00E+00
+1.260033E-01	0.00E+00
+1.742294E-01	0.00E+00
+2.018342E-01	0.00E+00
+2.018342E-01	0.00E+00
+1.742294E-01	0.00E+00
+1.260033E-01	0.00E+00
+6.896236E-02	0.00E+00
+1.616123E-02	0.00E+00
+-2.186839E-02	0.00E+00
+-3.984992E-02	0.00E+00
+-3.863829E-02	0.00E+00
+-2.411254E-02	0.00E+00
+-4.643690E-03	0.00E+00
+1.186803E-02	0.00E+00
+2.035163E-02	0.00E+00
+1.961570E-02	0.00E+00
+1.193310E-02	0.00E+00
+1.537275E-03	0.00E+00
+-7.265152E-03	0.00E+00
+-1.163641E-02	0.00E+00
+-1.092138E-02	0.00E+00
+-6.434164E-03	0.00E+00
+-5.760239E-04	0.00E+00
+4.259952E-03	0.00E+00
+6.550936E-03	0.00E+00
+6.003528E-03	0.00E+00
+3.385199E-03	0.00E+00
+7.008609E-06	0.00E+00
+-2.869845E-03	0.00E+00
+-4.464801E-03	0.00E+00
+-4.625047E-03	0.00E+00
+-3.706377E-03	0.00E+00
+-2.303171E-03	0.00E+00
+-9.707718E-04	0.00E+00
+-4.737869E-05	0.00E+00
+3.871174E-04	0.00E+00
+4.429487E-04	0.00E+00
+3.059242E-04	0.00E+00
+1.504873E-04	0.00E+00
+0

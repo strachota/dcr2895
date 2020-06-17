@@ -1,0 +1,173 @@
+# Displacement response for AS84 Obninsk, Russian Federation broad-band channels
+# 
+# Seismometer type	= Guralp CMG-3T
+# Digitiser type	= IDA MK-7ISP
+# Data sample rate	= 40 s/s
+#
+# One zero has been added to convert velocity to displacement,
+# and two zeros have been added to convert acceleration to displacement. 
+#
+# Following comments are extracted for reference purpose.
+#----------------------------------------------------
+# The sensitivity of the channel is  1.304 counts/(nm/s)
+#   at frequency of 1.0 Hz 
+# 
+#  stage-1  
+#     Response type:                    	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	M/S - (null)
+#     Response out units lookup:             	V - (null)
+#     A0 normalization factor:               	2.981940E+17
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	1.500000E+03
+#     Frequency of sensitivity:              	1.000000E+00
+#
+#  stage-2  
+#     Response type:                         	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	V - (null)
+#     Response out units lookup:             	V - (null)
+#     A0 normalization factor:               	1.000000E+00
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	3.343000E+01
+#     Frequency of sensitivity:              	1.000000E+00
+#
+#  stage-3  
+#     Response type:                         	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	V - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     A0 normalization factor:               	1.000000E+00
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	6.553600E+03
+#     Frequency of sensitivity:              	1.000000E+00
+# 
+#  stage-4  
+#     Response type:                         	D
+#     Response in units lookup:              	COUNTS - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     Response decimation factor:            	5
+#     Response decimation offset:           	0
+#     Response delay:                       	0.000000E+00
+#     Response correction:                  	0.000000E+00
+#     Sensitivity:                           	4.000000E+00
+#     Frequency of sensitivity:              	1.000000E+00
+#----------------------------------------------------
+ theoretical  1   instrument    paz
+2.98194E+17
+10
+-4.366820E-02	4.530258E-02	0.000000E+00	0.000000E+00
+-4.366820E-02	-4.530258E-02	0.000000E+00	0.000000E+00
+-5.057964E+02	1.935221E+02	0.000000E+00	0.000000E+00
+-5.057964E+02	-1.935221E+02	0.000000E+00	0.000000E+00
+-3.034779E+02	8.122336E+01	0.000000E+00	0.000000E+00
+-3.034779E+02	-8.122336E+01	0.000000E+00	0.000000E+00
+-2.221445E+02	2.221439E+02	0.000000E+00	0.000000E+00
+-2.221445E+02	-2.221439E+02	0.000000E+00	0.000000E+00
+-8.130442E+01	3.034559E+02	0.000000E+00	0.000000E+00
+-8.130442E+01	-3.034559E+02	0.000000E+00	0.000000E+00
+4
+0.000000E+00	0.000000E+00	0.000000E+00	0.000000E+00
+0.000000E+00	0.000000E+00	0.000000E+00	0.000000E+00
+-9.456194E+02	0.000000E+00	0.000000E+00	0.000000E+00
+0.000000E+00	0.000000E+00	0.000000E+00	0.000000E+00
+ theoretical  3    digitizer    fir
+200
+99
+-3.377410E-07	0.00E+00
+-8.629090E-07	0.00E+00
+-1.549420E-06	0.00E+00
+-2.040370E-06	0.00E+00
+-1.603610E-06	0.00E+00
+8.767010E-07	0.00E+00
+6.730390E-06	0.00E+00
+1.709000E-05	0.00E+00
+3.222920E-05	0.00E+00
+5.073410E-05	0.00E+00
+6.870460E-05	0.00E+00
+7.928780E-05	0.00E+00
+7.290830E-05	0.00E+00
+3.852560E-05	0.00E+00
+-3.389900E-05	0.00E+00
+-1.498240E-04	0.00E+00
+-3.059150E-04	0.00E+00
+-4.860840E-04	0.00E+00
+-6.589880E-04	0.00E+00
+-7.783270E-04	0.00E+00
+-7.871020E-04	0.00E+00
+-6.264270E-04	0.00E+00
+-2.485970E-04	0.00E+00
+3.670880E-04	0.00E+00
+1.198360E-03	0.00E+00
+2.167510E-03	0.00E+00
+3.136470E-03	0.00E+00
+3.912890E-03	0.00E+00
+4.269710E-03	0.00E+00
+3.978290E-03	0.00E+00
+2.852390E-03	0.00E+00
+7.976730E-04	0.00E+00
+-2.141360E-03	0.00E+00
+-5.746290E-03	0.00E+00
+-9.610610E-03	0.00E+00
+-1.315380E-02	0.00E+00
+-1.566700E-02	0.00E+00
+-1.638870E-02	0.00E+00
+-1.460320E-02	0.00E+00
+-9.750570E-03	0.00E+00
+-1.530460E-03	0.00E+00
+1.001490E-02	0.00E+00
+2.445620E-02	0.00E+00
+4.098040E-02	0.00E+00
+5.844770E-02	0.00E+00
+7.549740E-02	0.00E+00
+9.069200E-02	0.00E+00
+1.026800E-01	0.00E+00
+1.103570E-01	0.00E+00
+1.130000E-01	0.00E+00
+1.103570E-01	0.00E+00
+1.026800E-01	0.00E+00
+9.069200E-02	0.00E+00
+7.549740E-02	0.00E+00
+5.844770E-02	0.00E+00
+4.098040E-02	0.00E+00
+2.445620E-02	0.00E+00
+1.001490E-02	0.00E+00
+-1.530460E-03	0.00E+00
+-9.750570E-03	0.00E+00
+-1.460320E-02	0.00E+00
+-1.638870E-02	0.00E+00
+-1.566700E-02	0.00E+00
+-1.315380E-02	0.00E+00
+-9.610610E-03	0.00E+00
+-5.746290E-03	0.00E+00
+-2.141360E-03	0.00E+00
+7.976730E-04	0.00E+00
+2.852390E-03	0.00E+00
+3.978290E-03	0.00E+00
+4.269710E-03	0.00E+00
+3.912890E-03	0.00E+00
+3.136470E-03	0.00E+00
+2.167510E-03	0.00E+00
+1.198360E-03	0.00E+00
+3.670880E-04	0.00E+00
+-2.485970E-04	0.00E+00
+-6.264270E-04	0.00E+00
+-7.871020E-04	0.00E+00
+-7.783270E-04	0.00E+00
+-6.589880E-04	0.00E+00
+-4.860840E-04	0.00E+00
+-3.059150E-04	0.00E+00
+-1.498240E-04	0.00E+00
+-3.389900E-05	0.00E+00
+3.852560E-05	0.00E+00
+7.290830E-05	0.00E+00
+7.928780E-05	0.00E+00
+6.870460E-05	0.00E+00
+5.073410E-05	0.00E+00
+3.222920E-05	0.00E+00
+1.709000E-05	0.00E+00
+6.730390E-06	0.00E+00
+8.767010E-07	0.00E+00
+-1.603610E-06	0.00E+00
+-2.040370E-06	0.00E+00
+-1.549420E-06	0.00E+00
+-8.629090E-07	0.00E+00
+-3.377410E-07	0.00E+00
+0

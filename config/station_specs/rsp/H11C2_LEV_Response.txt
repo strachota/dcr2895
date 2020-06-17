@@ -1,0 +1,13 @@
+# Terminal Sensitivity Response for Wake Island H11S
+# Channel H11C2/LEV
+# Shore Facility / DASS / DDFI
+# Effective: 17 February 2007
+# File name: H11C2_LEV_Response.txt
+# Source: Andrew Forbes
+# System response: SAIC Cable Voltage Sensor
+# The following response file for Cable Current Sensor
+# is in frequency (Hz)/ amplitude (gain factor)/phase (deg) format 
+# Current response rel to 0.586 volts/count @ 1 Hz
+ theoretical  0   instrument    fap 
+1
+1.00	1.00000	0.00000	0.0	0.0

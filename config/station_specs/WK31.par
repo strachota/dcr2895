@@ -1,0 +1,14 @@
+# %W% %G%
+
+# For DFX
+#
+WaveType=hydro-
+NetType=ss
+StaType=1c
+
+hydro-sta=WK31
+hydro-chan=ed
+
+StaPro-statype="hy"
+StaPro-do-loc-mag=0
+

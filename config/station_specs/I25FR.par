@@ -1,0 +1,10 @@
+# I25FR.par
+# For StaPro
+#
+StaPro-statype=infra
+StaPro-do-loc-mag=0
+
+##  For DFX (might be obsolete for DTK-PMCC)
+WaveType=infra-
+NetType=array
+StaType=1c

@@ -1,0 +1,12 @@
+# I42PT.par
+
+# For StaPro
+#
+StaPro-statype=infra
+StaPro-do-loc-mag=0
+
+# For DFX
+#
+WaveType=infra-
+NetType=array
+StaType=1c

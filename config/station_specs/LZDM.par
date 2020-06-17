@@ -1,0 +1,12 @@
+# CCASEID: @(#) LZDM.par /main/R3_tst/1  10/20/2008
+NetType=array
+StaType=1c
+BandType1=b
+BandType3=b
+#Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=BHZ,BHN,BHE
+tf-vert-chan=BHZ
+
+# For StaPro
+min-teleseismic-velocity=9.4
+noise-fkqual-fstat="4.0,3.0"

@@ -1,0 +1,46 @@
+#
+# Displacement response for Ogasawara, Japan
+#
+# Example:  OGS be bn bz
+#
+# Received from Seiji Tsuboi  tsuboi@eri.u-tokyo.ac.jp  06 Oct 95
+#
+#
+# PAZ2  1 V  3.94780000e+03                 4  2 STS-1 Vertical
+#  -1.23400000e-02  1.23400000e-02
+#  -1.23400000e-02 -1.23400000e-02
+#  -3.91800000e+01  4.91200000e+01
+#  -3.91800000e+01 -4.91200000e+01
+#   0.00000000e+00  0.00000000e+00
+#   0.00000000e+00  0.00000000e+00
+# PAZ2  2 V  2.97490400e+04                 3  0 Analog anti-aliasing filter
+#  -3.14159300e+01  0.00000000e+00
+#  -1.57079600e+01  2.72069900e+01
+#  -1.57079600e+01 -2.72069900e+01
+# 
+# 
+# * ground velocity(unit: 1.0e-9 m/sec) will be given by deviding the data by
+#   A1*A2*H1(iw)*H2(iw)/Ncalib at each frequency in frequency domain,
+#   where A1 and A2 are the scale factor of responses and H1, H2 are
+#   the transfer fanctions defined above.
+#
+# Third zero added to convert to displacement
+#
+ theoretical  0   instrument    paz Seiji Tsuboi
+5.0125e+02
+4
+-1.23400000e-02    1.23400000e-02   0.0   0.0
+-1.23400000e-02   -1.23400000e-02   0.0   0.0
+-3.91800000e+01    4.91200000e+01   0.0   0.0
+-3.91800000e+01   -4.91200000e+01   0.0   0.0
+3
+0.0   0.0   0.0   0.0
+0.0   0.0   0.0   0.0
+0.0   0.0   0.0   0.0
+ theoretical  1   filter        paz Seiji Tsuboi
+2.97490400e+04
+3
+-3.14159300e+01    0.00000000e+00   0.0   0.0
+-1.57079600e+01    2.72069900e+01   0.0   0.0
+-1.57079600e+01   -2.72069900e+01   0.0   0.0
+0

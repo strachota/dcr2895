@@ -1,0 +1,13 @@
+# CCASEID: @(#) WRAI.par CMR /main/2  09/13/2000
+# %W% %G%
+
+# For StaPro
+#
+StaPro-statype=infra
+StaPro-do-loc-mag=0
+StaPro-infra-max-grouping-time=600.0
+
+##  For DFX
+WaveType=infra-
+NetType=array
+StaType=1c

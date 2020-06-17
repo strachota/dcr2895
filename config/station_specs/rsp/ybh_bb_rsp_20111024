@@ -1,0 +1,130 @@
+# Displacement response for YBH, Yreka, high  broad-band channnels
+# 
+# Seismometer type	= Streckeisen  STS-2
+# Digitiser		= Quanterra Q330
+# Data sample rate	= 100 s/s
+#
+#  This response file is converted from SEED format 
+#  instrument response. 
+#  One zero has been added to convert velocity to displacement,
+#  and two zeros have been added to convert acceleration to displacement. 
+#
+#  The following comments have been extracted from the SEED file for
+#  reference purposes.
+#----------------------------------------------------
+# The sensitivity of the channel is 8.3885 counts/(nm/s)
+#   at frequency of 1 Hz
+# 
+#  stage-1  
+#     Response type:                    	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	M/S - (null)
+#     Response out units lookup:             	V - (null)
+#     A0 normalization factor:               	4.861850E+07
+#     Normalization frequency:               	1.200000E-01
+#     Sensitivity:                           	2.000000E+04
+#     Frequency of sensitivity:              	1.200000E-01
+#
+#  stage-2  
+#     Response type:                         	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	V - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     A0 normalization factor:               	1.000000E+00
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	4.194300E+05
+#     Frequency of sensitivity:              	1.000000E+00
+# 
+#  stage-4  
+#     Response type:                         	D
+#     Response in units lookup:              	COUNTS - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     Response decimation factor:            	1
+#     Response decimation offset:           	0
+#     Response delay:                       	4.160700E-02
+#     Response correction:                  	4.160700E-02
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:              	1.000000E+00
+#
+# 
+#----------------------------------------------------
+ theoretical  1  instrument   paz
+4.86185E+07
+5			
+-3.702370E-02	3.702440E-02	0.00E+00	0.00E+00
+-3.702370E-02	-3.702440E-02	0.00E+00	0.00E+00
+-1.187520E+02	4.234880E+02	0.00E+00	0.00E+00
+-1.187520E+02	-4.234880E+02	0.00E+00	0.00E+00
+-2.513270E+02	0.00E+00	0.00E+00	0.00E+00
+3
+0.00E+00	0.00E+00	0.00E+00	0.00E+00
+0.00E+00	0.00E+00	0.00E+00	0.00E+00
+0.00E+00	0.00E+00	0.00E+00	0.00E+00
+
+theoretical  3    digitizer    fir
+100
+65
+1.315493E-11	0
+1.501065E-04	0
+1.339681E-02	0
+1.644292E-01	0
+5.688094E-01	0
+5.173835E-01	0
+-2.608360E-01	0
+-1.220329E-01	0
+2.571813E-01	0
+-2.029026E-01	0
+7.075880E-02	0
+3.879666E-02	0
+-1.143135E-01	0
+1.354797E-01	0
+-1.114475E-01	0
+6.705481E-02	0
+-1.927124E-02	0
+-2.093129E-02	0
+4.768056E-02	0
+-5.933829E-02	0
+5.757931E-02	0
+-4.623331E-02	0
+2.977715E-02	0
+-1.248294E-02	0
+-2.366075E-03	0
+1.278821E-02	0
+-1.846982E-02	0
+1.879725E-02	0
+-1.713865E-02	0
+1.278199E-02	0
+-7.675787E-03	0
+3.255159E-03	0
+-8.947563E-05	0
+-1.778757E-03	0
+2.596043E-03	0
+-2.666169E-03	0
+2.307403E-03	0
+-1.770516E-03	0
+1.218643E-03	0
+-7.460492E-04	0
+3.921752E-04	0
+-1.583665E-04	0
+2.437801E-05	0
+3.807573E-05	0
+-5.618048E-05	0
+5.152771E-05	0
+-3.856469E-05	0
+2.530286E-05	0
+-1.512465E-05	0
+8.739795E-06	0
+-4.648117E-06	0
+1.376276E-06	0
+7.042064E-07	0
+2.241873E-07	0
+-1.251026E-06	0
+1.066771E-07	0
+2.642876E-07	0
+3.226638E-07	0
+-8.074162E-08	0
+-1.099049E-07	0
+-3.325203E-08	0
+1.388506E-08	0
+1.056275E-08	0
+2.577911E-09	0
+-7.018623E-10	0
+0

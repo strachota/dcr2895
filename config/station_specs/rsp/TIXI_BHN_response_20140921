@@ -1,0 +1,131 @@
+# Displacement response for  AS091_TIXI Tixi broad-band channel BHN
+# 
+# Seismometer type       	= Streckeisen STS-1
+# Digitiser			= Quanterra Q330
+# Data sample rate      	= 20 s/s
+# Sergelen Bazarragchaa        	IMS/MFS/MU 12 November 2014
+#
+#  This response file is converted from SEED format 
+#  instrument response. 
+#  One zero has been added to convert velocity to displacement,
+#  and two zeros have been added to convert acceleration to displacement. 
+#
+#  Following comments are extracted from SEED file for
+#  reference propose.
+#----------------------------------------------------
+# The sensitivity of the channel is  3.81849 counts/(nm/s)
+# at frequency of   0.05 Hz
+# 
+#  stage-1  
+#     Response type:                    	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	M/S - (null)
+#     Response out units lookup:             	V - (null)
+#     A0 normalization factor:               	97894.04
+#     Normalization frequency:               	2.000000E-02
+#     Sensitivity:                           	2.276000E+03
+#     Frequency of sensitivity:              	5.000000E-02
+# 
+#  stage-2  
+#     Response type:                         	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	V - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     A0 normalization factor:               	1.000000E+00
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	1.677720E+06
+#     Frequency of sensitivity:              	0.000000E+00
+# 
+#  stage-3  
+#     Response type:                         	D
+#     Response in units lookup:              	COUNTS - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     Response decimation factor:            	1
+#     Response decimation offset:           	0
+#     Response delay:                       	1.630500E+00
+#     Response correction:                  	1.630500E+00
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:              	0.000000E+00
+# 
+
+#----------------------------------------------------
+ theoretical  1   instrument    paz
+97894.04
+4
+-1.234000E-02  1.234000E-02	0	0
+-1.234000E-02 -1.234000E-02	0	0
+-3.918000E+01  4.912000E+01	0	0
+-3.918000E+01 -4.912000E+01	0	0
+3
+0	0	0	0
+0	0	0	0
+0	0	0	0
+ theoretical  3    digitizer    fir
+20
+67
+-3.653420E-17	0.00E+00
+3.674880E-08	0.00E+00
+-4.270600E-07	0.00E+00
+1.145020E-06	0.00E+00
+-1.875940E-07	0.00E+00
+-3.372740E-07	0.00E+00
+2.787470E-06	0.00E+00
+-3.744030E-06	0.00E+00
+5.411720E-06	0.00E+00
+7.473360E-06	0.00E+00
+-5.177590E-04	0.00E+00
+2.106770E-04	0.00E+00
+4.632580E-05	0.00E+00
+-6.082220E-04	0.00E+00
+1.441750E-03	0.00E+00
+-2.406270E-03	0.00E+00
+3.225340E-03	0.00E+00
+-3.506390E-03	0.00E+00
+2.814410E-03	0.00E+00
+-7.719710E-04	0.00E+00
+-2.805120E-03	0.00E+00
+7.778050E-03	0.00E+00
+-1.358150E-02	0.00E+00
+1.917650E-02	0.00E+00
+-2.297040E-02	0.00E+00
+2.403980E-02	0.00E+00
+-2.209860E-02	0.00E+00
+8.607340E-03	0.00E+00
+1.175250E-02	0.00E+00
+-4.477870E-02	0.00E+00
+9.649230E-02	0.00E+00
+-1.917550E-01	0.00E+00
+5.276520E-01	0.00E+00
+7.241670E-01	0.00E+00
+-1.569050E-01	0.00E+00
+4.425740E-02	0.00E+00
+3.141680E-03	0.00E+00
+-2.667140E-02	0.00E+00
+3.615320E-02	0.00E+00
+-3.856870E-02	0.00E+00
+3.108420E-02	0.00E+00
+-2.352590E-02	0.00E+00
+1.532110E-02	0.00E+00
+-7.403980E-03	0.00E+00
+1.096450E-03	0.00E+00
+3.097970E-03	0.00E+00
+-5.193200E-03	0.00E+00
+5.561310E-03	0.00E+00
+-4.761100E-03	0.00E+00
+3.382130E-03	0.00E+00
+-1.920520E-03	0.00E+00
+7.152180E-04	0.00E+00
+7.677190E-05	0.00E+00
+-4.518970E-04	0.00E+00
+5.027000E-04	0.00E+00
+-5.650370E-04	0.00E+00
+-5.568000E-05	0.00E+00
+1.577360E-05	0.00E+00
+-1.419850E-06	0.00E+00
+8.149090E-07	0.00E+00
+6.807950E-07	0.00E+00
+-1.252730E-06	0.00E+00
+1.524350E-06	0.00E+00
+-2.833360E-07	0.00E+00
+-1.063840E-08	0.00E+00
+1.257120E-09	0.00E+00
+-5.429540E-11	0.00E+00
+0

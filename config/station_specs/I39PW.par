@@ -1,0 +1,13 @@
+# CCASEID: @(#) I39PW.par /main/R3_tst/1  08/24/2005
+# I39PW.par
+
+# For StaPro
+#
+StaPro-statype=infra
+StaPro-do-loc-mag=0
+
+# For DFX
+#
+WaveType=infra-
+NetType=array
+StaType=1c

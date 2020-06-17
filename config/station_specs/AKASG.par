@@ -1,0 +1,14 @@
+# CCASEID: @(#) AKASG.par /main/R3_tst/5  11/30/2005
+#Because it's a large array 
+#should it be NetType=larray???
+NetType=array
+StaType=1c
+BandType1=b
+tf-vert-chan=BHZ
+BandType3=b
+#Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=BHZ,BHN,BHE
+min-teleseismic-velocity=9.4
+noise-fkqual-fstat="4.0,3.0"
+noise-mbsnr=2.0
+noise-fksnr=1.6

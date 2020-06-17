@@ -1,0 +1,403 @@
+# Displacement response for GS21 (cap) short period channels
+# Response info for GS21 (cap) short period sites SHZ.
+# 
+# Effective: Sep. 10, 2018  
+# Created:  Apr. 26, 2017 
+# File name: MKAR.GS21.Theor.pazfir
+# Inid: 11747 - 11755 
+# Source:  James Neely (TTGR)
+# System equipment: Geotech GS21 sensor and AIM24S-1 digitizer.
+#
+# The nominal calib values for this configuration are as follows:
+#
+# MK01 SHZ 0.012260 nm/count at 1.0 Hz.
+# MK02 SHZ 0.012510 nm/count at 1.0 Hz.
+# MK03 SHZ 0.013080 nm/count at 1.0 Hz.
+# MK04 SHZ 0.011250 nm/count at 1.0 Hz.
+# MK05 SHZ 0.010710 nm/count at 1.0 Hz.
+# MK06 SHZ 0.010300 nm/count at 1.0 Hz.
+# MK07 SHZ 0.011830 nm/count at 1.0 Hz.
+# MK08 SHZ 0.011580 nm/count at 1.0 Hz.
+# MK09 SHZ 0.012790 nm/count at 1.0 Hz.
+# 
+# One zero has been added to convert velocity to displacement,
+# and two zeros have been added to convert acceleration to displacement. 
+#
+# Following comments are extracted for reference purposes.
+#--------------------------------------------------------------------------
+# The sensitivity of the channel is 12.67488 counts/(nm/s)
+#   at frequency of 1.0 Hz.
+# 
+#  stage-1  
+#     Response type:             A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	M/S - (null)
+#     Response out units lookup:             	V - (null)
+#     A0 normalization factor:               	4.135200E+02 
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	2.924450E+02
+#     Frequency of sensitivity:              	1.000000E+00
+# 
+#  stage-2   
+#     Response type:              A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	V - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     A0 normalization factor:               	1.000000E+00
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	4.334108E+07
+#     Frequency of sensitivity:              	1.000000E+00
+#
+#  stage-3
+#     Response type:                         	D
+#     Response in units lookup:              	COUNTS - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     Response decimation factor:            	8
+#     Response decimation offset:           	0.000000E+00
+#     Response delay:                       	0.000000E+00
+#     Response correction:                  	0.000000E+00
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:              	1.000000E+00
+# 
+#  stage-4
+#     Response type:                         	D
+#     Response in units lookup:             	COUNTS - (null)
+#     Response out units lookup:            	COUNTS - (null)
+#     Response decimation factor:            	2
+#     Response decimation offset:           	0.000000E+00
+#     Response delay:                        	0.000000E+00
+#     Response correction:                   	0.000000E+00
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:             	1.000000E+00
+# 
+#  stage-5
+#     Response type:                         	D
+#     Response in units lookup:             	COUNTS - (null)
+#     Response out units lookup:            	COUNTS - (null)
+#     Response decimation factor:            	2
+#     Response decimation offset:           	0.000000E+00
+#     Response delay:                        	0.000000E+00
+#     Response correction:                   	0.000000E+00
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:             	1.000000E+00
+#
+#  stage-6
+#     Response type:                         	D
+#     Response in units lookup:             	COUNTS - (null)
+#     Response out units lookup:            	COUNTS - (null)
+#     Response decimation factor:            	2
+#     Response decimation offset:           	0.000000E+00
+#     Response delay:                        	0.000000E+00
+#     Response correction:                   	0.000000E+00
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:             	1.000000E+00
+#
+#  stage-7
+#     Response type:                         	D
+#     Response in units lookup:             	COUNTS - (null)
+#     Response out units lookup:            	COUNTS - (null)
+#     Response decimation factor:            	2
+#     Response decimation offset:           	0.000000E+00
+#     Response delay:                        	0.000000E+00
+#     Response correction:                   	0.000000E+00
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:             	1.000000E+00
+#
+#  stage-8
+#     Response type:                         	D
+#     Response in units lookup:             	COUNTS - (null)
+#     Response out units lookup:            	COUNTS - (null)
+#     Response decimation factor:            	2
+#     Response decimation offset:           	0.000000E+00
+#     Response delay:                        	0.000000E+00
+#     Response correction:                   	0.000000E+00
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:             	1.000000E+00
+# 
+#  stage-9
+#     Response type:                         	D
+#     Response in units lookup:             	COUNTS - (null)
+#     Response out units lookup:            	COUNTS - (null)
+#     Response decimation factor:            	2
+#     Response decimation offset:           	0.000000E+00
+#     Response delay:                        	0.000000E+00
+#     Response correction:                   	0.000000E+00
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:             	1.000000E+00
+# 
+#  stage-10
+#     Response type:                        	D
+#     Response in units lookup:              	COUNTS - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     Response decimation factor:           	2
+#     Response decimation offset:            	0.000000E+00
+#     Response delay:                        	0.000000E+00
+#     Response correction:                   	0.000000E+00
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:              	1.000000E+00
+#
+#  stage-11 group delay
+#     Stage sequence number:                 11
+#     Input sample rate:                     4.000000E+01
+#     Decimation factor:                     1
+#     Decimation offset:                     0
+#     Estimated delay (seconds):             0.0023
+#     Correction applied (seconds):          0.0023
+# 
+#------------------------------------------------------------------
+ theoretical 1 instrument paz
+4.135200e+02
+2
+  -4.44221e+00 +4.44355e+00 +0.00000e+00 +0.00000e+00
+  -4.44221e+00 -4.44355e+00 +0.00000e+00 +0.00000e+00
+3
+  +0.00000e+00 +0.00000e+00 +0.00000e+00 +0.00000e+00
+  +0.00000e+00 +0.00000e+00 +0.00000e+00 +0.00000e+00
+  +0.00000e+00 +0.00000e+00 +0.00000e+00 +0.00000e+00
+ theoretical  3    digitizer    fir
+40960
+33
+  0.00000e+00 +0.00000e+00
+  0.00000e+00 +0.00000e+00
+  1.00000e+00 +0.00000e+00
+  4.00000e+00 +0.00000e+00
+  1.00000e+01 +0.00000e+00
+  2.00000e+01 +0.00000e+00
+  3.50000e+01 +0.00000e+00
+  5.60000e+01 +0.00000e+00
+  8.40000e+01 +0.00000e+00
+  1.20000e+02 +0.00000e+00
+  1.61000e+02 +0.00000e+00
+  2.04000e+02 +0.00000e+00
+  2.46000e+02 +0.00000e+00
+  2.84000e+02 +0.00000e+00
+  3.15000e+02 +0.00000e+00
+  3.36000e+02 +0.00000e+00
+  3.44000e+02 +0.00000e+00
+  3.36000e+02 +0.00000e+00
+  3.15000e+02 +0.00000e+00
+  2.84000e+02 +0.00000e+00
+  2.46000e+02 +0.00000e+00
+  2.04000e+02 +0.00000e+00
+  1.61000e+02 +0.00000e+00
+  1.20000e+02 +0.00000e+00
+  8.40000e+01 +0.00000e+00
+  5.60000e+01 +0.00000e+00
+  3.50000e+01 +0.00000e+00
+  2.00000e+01 +0.00000e+00
+  1.00000e+01 +0.00000e+00
+  4.00000e+00 +0.00000e+00
+  1.00000e+00 +0.00000e+00
+  0.00000e+00 +0.00000e+00
+  0.00000e+00 +0.00000e+00
+  0
+ theoretical  4    digitizer    fir
+5120
+13
+  8.19200e+03 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  7.56941e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  8.19200e+03 +0.00000e+00
+  0
+ theoretical  5    digitizer    fir
+2560
+13
+  8.19200e+03 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  7.56941e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  8.19200e+03 +0.00000e+00
+  0
+ theoretical  6    digitizer    fir
+1280
+13
+  8.19200e+03 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  7.56941e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  8.19200e+03 +0.00000e+00
+  0
+ theoretical  7    digitizer    fir
+640
+13
+  8.19200e+03 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  7.56941e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  8.19200e+03 +0.00000e+00
+  0
+ theoretical  8    digitizer    fir
+320
+13
+  8.19200e+03 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  7.56941e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  8.19200e+03 +0.00000e+00
+  0
+ theoretical  9    digitizer    fir
+160
+13
+  8.19200e+03 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  7.56941e+06 +0.00000e+00
+  6.48806e+06 +0.00000e+00
+  4.05504e+06 +0.00000e+00
+  1.80224e+06 +0.00000e+00
+  5.40672e+05 +0.00000e+00
+  9.83040e+04 +0.00000e+00
+  8.19200e+03 +0.00000e+00
+  0
+ theoretical 10	   digitizer    fir
+80
+101
+  -2.60000e+01 +0.00000e+00
+  -2.47000e+02 +0.00000e+00
+  -8.22000e+02 +0.00000e+00
+  -1.36200e+03 +0.00000e+00
+  -8.39000e+02 +0.00000e+00
+  +1.01200e+03 +0.00000e+00
+  +2.19700e+03 +0.00000e+00
+  +2.12000e+02 +0.00000e+00
+  -3.44300e+03 +0.00000e+00
+  -3.07700e+03 +0.00000e+00
+  +3.15600e+03 +0.00000e+00
+  +7.16800e+03 +0.00000e+00
+  +2.56000e+02 +0.00000e+00
+  -1.07090e+04 +0.00000e+00
+  -7.64400e+03 +0.00000e+00
+  +1.07130e+04 +0.00000e+00
+  +1.80550e+04 +0.00000e+00
+  -3.87300e+03 +0.00000e+00
+  -2.80070e+04 +0.00000e+00
+  -1.18260e+04 +0.00000e+00
+  +3.16410e+04 +0.00000e+00
+  +3.51940e+04 +0.00000e+00
+  -2.21770e+04 +0.00000e+00
+  -6.04270e+04 +0.00000e+00
+  -5.40400e+03 +0.00000e+00
+  +7.70650e+04 +0.00000e+00
+  +5.10560e+04 +0.00000e+00
+  -7.19820e+04 +0.00000e+00
+  -1.06905e+05 +0.00000e+00
+  +3.34160e+04 +0.00000e+00
+  +1.56296e+05 +0.00000e+00
+  +4.36780e+04 +0.00000e+00
+  -1.75718e+05 +0.00000e+00
+  -1.52409e+05 +0.00000e+00
+  +1.39856e+05 +0.00000e+00
+  +2.70573e+05 +0.00000e+00
+  -2.90830e+04 +0.00000e+00
+  -3.60427e+05 +0.00000e+00
+  -1.62173e+05 +0.00000e+00
+  +3.71807e+05 +0.00000e+00
+  +4.17807e+05 +0.00000e+00
+  -2.46840e+05 +0.00000e+00
+  -6.93181e+05 +0.00000e+00
+  -7.83880e+04 +0.00000e+00
+  +9.02497e+05 +0.00000e+00
+  +6.85231e+05 +0.00000e+00
+  -8.65217e+05 +0.00000e+00
+  -1.71356e+06 +0.00000e+00
+  -2.62000e+02 +0.00000e+00
+  +3.27621e+06 +0.00000e+00
+  +4.95047e+06 +0.00000e+00
+  +3.27621e+06 +0.00000e+00
+  -2.62000e+02 +0.00000e+00
+  -1.71356e+06 +0.00000e+00
+  -8.65217e+05 +0.00000e+00
+  +6.85231e+05 +0.00000e+00
+  +9.02497e+05 +0.00000e+00
+  -7.83880e+04 +0.00000e+00
+  -6.93181e+05 +0.00000e+00
+  -2.46840e+05 +0.00000e+00
+  +4.17807e+05 +0.00000e+00
+  +3.71807e+05 +0.00000e+00
+  -1.62173e+05 +0.00000e+00
+  -3.60427e+05 +0.00000e+00
+  -2.90830e+04 +0.00000e+00
+  +2.70573e+05 +0.00000e+00
+  +1.39856e+05 +0.00000e+00
+  -1.52409e+05 +0.00000e+00
+  -1.75718e+05 +0.00000e+00
+  +4.36780e+04 +0.00000e+00
+  +1.56296e+05 +0.00000e+00
+  +3.34160e+04 +0.00000e+00
+  -1.06905e+05 +0.00000e+00
+  -7.19820e+04 +0.00000e+00
+  +5.10560e+04 +0.00000e+00
+  +7.70650e+04 +0.00000e+00
+  -5.40400e+03 +0.00000e+00
+  -6.04270e+04 +0.00000e+00
+  -2.21770e+04 +0.00000e+00
+  +3.51940e+04 +0.00000e+00
+  +3.16410e+04 +0.00000e+00
+  -1.18260e+04 +0.00000e+00
+  -2.80070e+04 +0.00000e+00
+  -3.87300e+03 +0.00000e+00
+  +1.80550e+04 +0.00000e+00
+  +1.07130e+04 +0.00000e+00
+  -7.64400e+03 +0.00000e+00
+  -1.07090e+04 +0.00000e+00
+  +2.56000e+02 +0.00000e+00
+  +7.16800e+03 +0.00000e+00
+  +3.15600e+03 +0.00000e+00
+  -3.07700e+03 +0.00000e+00
+  -3.44300e+03 +0.00000e+00
+  +2.12000e+02 +0.00000e+00
+  +2.19700e+03 +0.00000e+00
+  +1.01200e+03 +0.00000e+00
+  -8.39000e+02 +0.00000e+00
+  -1.36200e+03 +0.00000e+00
+  -8.22000e+02 +0.00000e+00
+  -2.47000e+02 +0.00000e+00
+  -2.60000e+01 +0.00000e+00
+  0
+#
+# Stage-11 Group delay value from Mr. James Neely (8/21/2012) from RBcal
+#
+ theoretical   11    digitizer    delay
+-0.0047

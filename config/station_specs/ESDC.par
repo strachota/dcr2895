@@ -1,0 +1,24 @@
+# CCASEID: @(#) ESDC.par /main/R3_tst/5  07/14/2005
+# %W% %G%
+
+# For StaPro
+#
+noise-fkqual-fstat="4.0,4.5"
+min-teleseismic-velocity=9.4
+noise-mbsnr=1.9
+noise-fksnr=1.9
+
+# For DFX
+#
+NetType=array
+StaType=3c
+dfx-det-recipe=ESDC-det.par
+dfx-qc-recipe=ESDC-array-qc.par
+
+#  For DFX-evch used in splp computations
+BandType1=s
+BandType3=s
+
+tf-vert-chan=BHZ
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=BHZ,BHN,BHE

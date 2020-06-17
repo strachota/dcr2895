@@ -1,0 +1,137 @@
+# Displacement response for DAVOX high broad-band channels
+# 
+# Seismometer type       = STS-2.5
+# Digitiser		 = Quanterra Q330HRS
+# Data sample rate       = 100 s/s
+#
+#  This response file is converted from SEED format 
+#  instrument response. 
+#  One zero has been added to convert velocity to displacement,
+#  and two zeros have been added to convert acceleration to displacement. 
+#
+#  The following comments have been extracted from the SEED file for
+#  reference purposes.
+#----------------------------------------------------
+# The sensitivity of the channel is 2.51658 count/(nm/s)
+#   at frequency of 1 Hz
+# 
+#  stage-1  
+#     Response type:                    	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	M/S
+#     Response out units lookup:             	V 
+#     A0 normalization factor:               	1.563840E-04
+#     Normalization frequency:               	1
+#     Sensitivity:                           	1.500000E+03
+#     Frequency of sensitivity:              	1
+# 
+#  stage-2  
+#     Response type:                         	A 
+#     Response in units lookup:             	V 
+#     Response out units lookup:            	COUNTS
+#     A0 normalization factor:               	1
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	1.677720E+06
+#     Frequency of sensitivity:              	1.000000E+01
+#
+# 
+#  stage-3  
+#     Response type:                        	D
+#     Response in units lookup:             	COUNTS
+#     Response out units lookup:            	COUNTS
+#     Response decimation factor:            	1
+#     Response decimation offset:           	0
+#     Response delay:                        	3.300000E-01
+#     Response correction:                   	3.300000E-01
+#     Sensitivity:                           	1.0
+#     Frequency of sensitivity:              	0.0
+# 
+#----------------------------------------------------
+ theoretical  1  instrument   paz    
+1.563840E-04
+7 
+-3.702000E-02  3.702000E-02  0.000000E+00  0.000000E+00
+-3.702000E-02 -3.702000E-02  0.000000E+00  0.000000E+00
+-1.604100E+01  0.000000E+00  0.000000E+00  0.000000E+00
+-1.604100E+01  0.000000E+00  0.000000E+00  0.000000E+00
+-3.273540E+02 -7.414160E+01  0.000000E+00  0.000000E+00
+-3.273540E+02  7.414160E+01  0.000000E+00  0.000000E+00
+-9.738940E+02  0.000000E+00  0.000000E+00  0.000000E+00
+9 
+-1.570800E+01  0.000000E+00  0.000000E+00  0.000000E+00
+-1.570800E+01  0.000000E+00  0.000000E+00  0.000000E+00
+-6.302030E+02  0.000000E+00  0.000000E+00  0.000000E+00
+-5.560620E+02 -9.361950E+02  0.000000E+00  0.000000E+00
+ -5.560620E+02  9.361950E+02  0.000000E+00  0.000000E+00
+-9.738940E+02  0.000000E+00  0.000000E+00  0.000000E+00
+0.00E+00 	0.00E+00 	0.00E+00 	0.00E+00
+0.00E+00 	0.00E+00 	0.00E+00 	0.00E+00
+0.00E+00 	0.00E+00 	0.00E+00 	0.00E+00
+ theoretical  3    digitizer    fir
+100
+65
+6.437110E-14	0
+6.582580E-08	0
+-7.531180E-07	0
+6.267430E-07	0
+2.470690E-06	0
+-3.152560E-06	0
+5.482400E-06	0
+-7.781130E-06	0
+5.105590E-06	0
+3.315680E-05	0
+-2.682380E-04	0
+-3.530560E-04	0
+6.224890E-04	0
+-1.010060E-03	0
+1.272760E-03	0
+-1.184310E-03	0
+5.126970E-04	0
+9.100910E-04	0
+-3.090450E-03	0
+5.811070E-03	0
+-8.577870E-03	0
+1.063440E-02	0
+-1.103990E-02	0
+8.813080E-03	0
+-3.077780E-03	0
+-4.648080E-03	0
+1.601700E-02	0
+-3.720880E-02	0
+5.360130E-02	0
+-7.261630E-02	0
+8.785510E-02	0
+-9.792760E-02	0
+9.467820E-02	0
+8.888910E-01	0
+1.384220E-01	0
+-1.153310E-01	0
+9.511580E-02	0
+-7.431980E-02	0
+5.212640E-02	0
+-3.396840E-02	0
+1.228310E-02	0
+-1.402390E-03	0
+-5.858370E-03	0
+1.076180E-02	0
+-1.214880E-02	0
+1.102760E-02	0
+-8.456630E-03	0
+5.394370E-03	0
+-2.570720E-03	0
+4.267280E-04	0
+8.810930E-04	0
+-1.413910E-03	0
+1.379280E-03	0
+-1.029930E-03	0
+5.962990E-04	0
+-3.037780E-04	0
+-2.987730E-04	0
+3.410940E-05	0
+5.269810E-06	0
+-8.092690E-06	0
+5.564590E-06	0
+-2.953830E-06	0
+2.261840E-06	0
+7.690850E-07	0
+-7.497590E-07	0
+0

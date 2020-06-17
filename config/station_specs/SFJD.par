@@ -1,0 +1,16 @@
+# CCASEID: @(#) SFJD.par /main/R3_tst/1  10/19/2005
+# SFJD.par
+#
+# For DFX
+#
+NetType=ss
+StaType=3c
+amp3c-sta=$(sta)
+amp3c-chan-list="'BHZ','BHN','BHE'"
+
+#  For DFX-evch used in splp computations
+BandType1=b
+BandType3=b
+tf-vert-chan="BHZ"
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans="BHZ,BHN,BHE"

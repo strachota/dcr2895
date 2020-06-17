@@ -1,0 +1,14 @@
+# CCASEID: @(#) LSAR.par CMR /main/2  08/16/2001
+# %W% %G%
+
+# For StaPro
+#
+StaPro-statype=infra
+StaPro-do-loc-mag=0
+
+##  For DFX
+WaveType=infra-
+NetType=array
+StaType=1c
+
+

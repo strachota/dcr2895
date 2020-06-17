@@ -1,0 +1,17 @@
+# CCASEID: @(#) ABKT.par CMR /main/2  08/16/2001
+# %W% %G%
+
+# For DFX
+#
+NetType=ss
+StaType=3c
+amp3c-sta=$(sta)
+amp3c-chan-list="'bz','be','bn'"
+
+#  For DFX-evch used in splp computations
+BandType1=b
+BandType3=b
+
+tf-vert-chan=bz
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=bz,bn,be

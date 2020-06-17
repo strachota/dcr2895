@@ -1,0 +1,13 @@
+# CCASEID: @(#) H10S.par /main/R3_tst/1  12/16/2004
+# For DFX
+#
+WaveType=hydro-
+NetType=ss
+StaType=1c
+
+hydro-sta=H10S
+hydro-chan=EDH
+
+StaPro-statype="hy"
+StaPro-do-loc-mag=0
+

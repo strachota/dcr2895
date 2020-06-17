@@ -1,0 +1,19 @@
+# CCASEID: @(#) PDYAR.par CMR /main/3  08/16/2001
+# %W% %G%
+
+# For StaPro
+#
+min-teleseismic-velocity=9.43
+
+# For DFX
+#
+NetType=array
+StaType=3c
+
+#  For DFX-evch used in splp computations
+BandType1=s
+BandType3=b
+
+tf-vert-chan=sz
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=bz,bn,be

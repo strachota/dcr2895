@@ -1,0 +1,21 @@
+# CCASEID: @(#) VIB.par CMR /main/2  08/16/2001
+# %W% %G%
+
+# For DFX
+#
+WaveType=hydro-
+NetType=ss
+StaType=1c
+
+hydro-sta=VIB
+hydro-chan=ez
+
+StaPro-statype="hy"
+StaPro-do-loc-mag=0
+
+BandType1=e
+BandType3=e
+
+tf-vert-chan=ez
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=ez,en,ee

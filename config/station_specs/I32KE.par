@@ -1,0 +1,11 @@
+# CCASEID: @(#) I32KE.par /main/R3_tst/1  06/17/2004
+
+# For StaPro
+#
+StaPro-statype=infra
+StaPro-do-loc-mag=0
+
+##  For DFX
+WaveType=infra-
+NetType=array
+StaType=1c

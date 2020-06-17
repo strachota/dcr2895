@@ -1,0 +1,22 @@
+# CCASEID: @(#) BVAR.par /main/R3_tst/3  03/09/2007
+# BVAR.par
+
+# For StaPro
+#
+noise-fkqual-fstat="4.0,5.4"
+min-teleseismic-velocity=9.4
+noise-mbsnr=1.9
+noise-fksnr=2.0
+
+# For DFX
+#
+NetType=array
+StaType=1c
+
+#  For DFX-evch used in splp computations
+BandType1=s
+BandType3=b
+
+tf-vert-chan=SHZ
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=BHZ,BH1,BH2

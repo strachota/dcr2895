@@ -1,0 +1,105 @@
+# Displacement response for TEIG, Tepich broad-band channels
+# 
+# Seismometer type	= STS-2.5
+# Digitiser type	= Quanterra Q330
+# Data sample rate	= 40 s/s
+#
+# One zero has been added to convert velocity to displacement,
+# and two zeros have been added to convert acceleration to displacement. 
+#
+# Following comments are extracted for reference purpose.
+#----------------------------------------------------
+# The sensitivity of the channel is 2.44779 counts/(nm/s)
+#   at frequency of 1.0 Hz 
+# 
+#  stage-1  
+#     Response type:                    	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	M/S - (null)
+#     Response out units lookup:             	V - (null)
+#     A0 normalization factor:               	4.322982E+10
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	1.45900E+03
+#     Frequency of sensitivity:              	1.000000E+00
+#
+#  stage-2  
+#     Response type:                         	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	V - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     A0 normalization factor:               	1
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	1.67772E+06
+#     Frequency of sensitivity:              	1.000000E+00
+# 
+#  stage-3  
+#     Response type:                         	D
+#     Response in units lookup:              	COUNTS - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     Response decimation factor:            	1
+#     Response decimation offset:           	0
+#     Response delay:                       	4.3046E-01
+#     Response correction:                  	4.3046E-01
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:              	1.000000E+00
+# 
+#----------------------------------------------------
+ theoretical  1   instrument    paz   
+4.55532E+01
+7
+-3.70000E-02	3.70000E-02	0.00E+00	0.00E+00
+-3.70000E-02	-3.70000E-02	0.00E+00	0.00E+00
+-9.73894E+00	0.00000E+00	0.00E+00	0.00E+00
+-2.19911E+02	1.38230E+02	0.00E+00	0.00E+00
+-2.19911E+02	-1.38230E+02	0.00E+00	0.00E+00
+-2.19911E+02	6.84867E+02	0.00E+00	0.00E+00
+-2.19911E+02	-6.84867E+02	0.00E+00	0.00E+00
+7
+-9.42478E+00	0.00E+00	0.00E+00	0.00E+00
+-6.28319E+02	0.00E+00	0.00E+00	0.00E+00
+-5.65487E+02	9.79452E+02	0.00E+00	0.00E+00
+-5.65487E+02	9.79452E+02	0.00E+00	0.00E+00
+0.00E+00	0.00E+00	0.00E+00	0.00E+00
+0.00E+00	0.00E+00	0.00E+00	0.00E+00
+0.00E+00	0.00E+00	0.00E+00	0.00E+00
+ theoretical  3    digitizer    fir                     
+40
+39
+4.18952E-13	0.00E+00
+3.30318E-04	0.00E+00
+1.02921E-03	0.00E+00
+-3.14123E-03	0.00E+00
+2.05709E-04	0.00E+00
+1.52521E-03	0.00E+00
+-6.23193E-03	0.00E+00
+1.04801E-02	0.00E+00
+-1.31202E-02	0.00E+00
+1.07821E-02	0.00E+00
+-1.44455E-03	0.00E+00
+-1.58729E-02	0.00E+00
+3.95074E-02	0.00E+00
+-6.51036E-02	0.00E+00
+8.53716E-02	0.00E+00
+-8.91913E-02	0.00E+00
+5.00619E-02	0.00E+00
+8.37233E-01	0.00E+00
+2.66723E-01	0.00E+00
+-1.66693E-01	0.00E+00
+9.52840E-02	0.00E+00
+-5.09218E-02	0.00E+00
+1.61458E-02	0.00E+00
+7.06362E-03	0.00E+00
+-1.83877E-02	0.00E+00
+1.99414E-02	0.00E+00
+-1.54895E-02	0.00E+00
+8.52735E-03	0.00E+00
+-2.55789E-03	0.00E+00
+-1.81103E-03	0.00E+00
+2.42649E-03	0.00E+00
+-3.75769E-03	0.00E+00
+4.67293E-04	0.00E+00
+6.33072E-04	0.00E+00
+-1.56874E-06	0.00E+00
+-1.25480E-05	0.00E+00
+3.21041E-07	0.00E+00
+-2.63324E-08	0.00E+00
+-5.09997E-08	0.00E+00
+0

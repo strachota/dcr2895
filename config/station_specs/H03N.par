@@ -1,0 +1,13 @@
+# CCASEID: @(#) H03N.par /main/R3_tst/1  04/14/2003
+# For DFX
+#
+WaveType=hydro-
+NetType=ss
+StaType=1c
+
+hydro-sta=H03N
+hydro-chan=EDH
+
+StaPro-statype="hy"
+StaPro-do-loc-mag=0
+

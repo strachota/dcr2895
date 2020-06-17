@@ -1,0 +1,13 @@
+# CCASEID: @(#) I30JP.par /main/R3_tst/1  03/02/2005
+# I30JP.par
+
+# For StaPro
+#
+StaPro-statype=infra
+StaPro-do-loc-mag=0
+
+# For DFX
+#
+WaveType=infra-
+NetType=array
+StaType=1c

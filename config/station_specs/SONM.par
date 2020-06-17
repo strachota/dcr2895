@@ -1,0 +1,14 @@
+# CCASEID: @(#) SONM.par /main/R3_tst/4  11/30/2005
+NetType=array
+StaType=1c
+BandType1=s
+BandType3=s
+#Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=SHZ,SHN,SHE
+tf-vert-chan=SHZ
+
+# For StaPro
+min-teleseismic-velocity=9.4
+noise-fkqual-fstat="4.0,3.0"
+noise-mbsnr=2.0
+noise-fksnr=1.9

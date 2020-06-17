@@ -1,0 +1,21 @@
+# FILE:
+#    BPFILTER.par
+#
+# DESCRIPTION
+#    Recipe file for specifying band pass filter frequencies
+#    used in DFX-hydro-detection.scm
+#
+
+
+
+#!BeginTable bpfilter
+|flo | fhi
+ 2        4
+ 3        6
+ 4        8
+ 6       12
+ 8       16
+ 16      32
+ 32      64
+ 2       80
+#!EndTable

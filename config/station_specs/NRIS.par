@@ -1,0 +1,17 @@
+# CCASEID: @(#) NRIS.par CMR /main/2  08/16/2001
+# %W% %G%
+
+# For DFX
+#
+NetType=ss
+StaType=3c
+amp3c-sta=$(sta)
+amp3c-chan-list="'sz','se','sn'"
+
+#  For DFX-evch used in splp computations
+BandType1=s
+BandType3=s
+
+tf-vert-chan=sz
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=sz,sn,se

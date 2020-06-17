@@ -1,0 +1,16 @@
+#
+# Displacement response for PPT short-period channels count/nm
+#
+# DASE ZM500&HM500
+#
+# nominal calibration 0.0954 nm/count at 2.0 s  
+#
+ theoretical  0   instrument    paz
+4.715579
+2
+-2.22	-2.22	0.0	0.0
+-2.22	2.22	0.0	0.0
+3
+0.0	0.0	0.0	0.0
+0.0	0.0	0.0	0.0
+0.0	0.0	0.0	0.0

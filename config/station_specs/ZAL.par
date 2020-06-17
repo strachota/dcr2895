@@ -1,0 +1,20 @@
+# CCASEID: @(#) ZAL.par /main/R3_tst/1  07/14/2005
+# %W% %G%
+
+# For DFX
+#
+NetType=ss
+StaType=3c
+amp3c-sta=$(sta)
+amp3c-chan-list="'sz','se','sn'"
+
+#  For DFX-evch used in splp computations
+BandType1=s
+BandType3=s
+
+tf-vert-chan=sz
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=sz,sn,se
+
+# For StaPro
+noise-mbsnr=2.0

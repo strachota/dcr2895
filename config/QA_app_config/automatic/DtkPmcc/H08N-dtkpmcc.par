@@ -1,6 +1,6 @@
 #
 par=$(IMSPAR)
-par=$(AUTOMATIC-DIR)/DtkPmcc/DtkPmcc-hydro.par
+par=$(QA_AUTOMATIC-DIR)/DtkPmcc/DtkPmcc-hydro.par
 ThresholdNbSensors="3,3,3,3,3,3,3,3,3,3"
 # -------------SUBNETS PARAMETERS----------------
 StaList="H08N1,H08N2,H08N3"

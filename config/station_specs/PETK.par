@@ -1,0 +1,12 @@
+# CCASEID: @(#) PETK.par /main/R3_tst/0  11/10/2006
+NetType=array
+StaType=1c
+BandType1=s
+BandType3=b
+#Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=BHZ,BH1,BH2
+tf-vert-chan=SHZ
+
+# For StaPro
+min-teleseismic-velocity=9.4
+noise-fkqual-fstat="4.0,3.0"

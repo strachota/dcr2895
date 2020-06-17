@@ -1,0 +1,13 @@
+#       @(#)PSUR.par	4.5     04/06/98
+
+#
+##  For DFX
+WaveType=hydro-
+NetType=ss
+StaType=1c
+
+hydro-sta=PSUR0
+hydro-chan=sp
+
+StaPro-statype="hy"
+StaPro-do-loc-mag=0

@@ -1,0 +1,113 @@
+# Displacement response for AS111, ANMO, Albuquerque broad-band channels
+# 
+# Seismometer type	= Streckeisen STS-5A-360 
+# Digitiser type	= Quanterra Q-330
+# Data sample rate	= 40 s/s
+#
+# One zero has been added to convert velocity to displacement,
+# and two zeros have been added to convert acceleration to displacement. 
+#
+# Following comments are extracted for reference purpose.
+#----------------------------------------------------
+# The sensitivity of the channel is  2.452827 count/(nm/s)
+#   at frequency of 1.0 Hz 
+# 
+#  stage-1 
+#     Response type:                    	A [Laplace Transform (Rad/sec)
+#     Response in units lookup:              	M/S - (null)
+#     Response out units lookup:             	V - (null)
+#     A0 normalization factor:               	9.754860E+12
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	1.462000E+03
+#     Frequency of sensitivity:              	1.000000E+00
+#
+#  stage-2
+#     Response type:                         	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	V - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     A0 normalization factor:               	1
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	1.677720E+06
+#     Frequency of sensitivity:              	1.000000E+01
+# 
+#  stage-3  
+#     Response type:                         	D
+#     Response in units lookup:              	COUNTS - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     Response decimation factor:            	1
+#     Response decimation offset:           	0
+#     Response delay:                       	4.304600E-01
+#     Response correction:                  	4.304600E-01
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:              	0.000000E+00
+# 
+# 
+#---------------------------------------------------- 
+ theoretical  1  instrument   paz
+9.754860E+12
+13
+-1.2310E-02	+1.2060E-02	0.00E+00	0.00E+00
+-1.2310E-02	-1.2060E-02	0.00E+00	0.00E+00
+-2.23068E+01  	+0.0000E+00	0.00E+00	0.00E+0
+-2.23068E+01    +0.0000E+00	0.00E+00	0.00E+0
+-5.01105E+02    +0.0000E+00	0.00E+00	0.00E+0
+-5.01105E+02    +0.0000E+00	0.00E+00	0.00E+0
+-5.01105E+02    +0.0000E+00	0.00E+00	0.00E+0
+-5.01105E+02    +0.0000E+00	0.00E+00	0.00E+0
+-5.01105E+02    +0.0000E+00	0.00E+00	0.00E+0
+-5.01105E+02    +0.0000E+00	0.00E+00	0.00E+0
+-1.21580E+02    +6.47231E+02	0.00E+00	0.00E+0
+-1.21580E+02    -6.47231E+02	0.00E+00	0.00E+0
+-3.51858E+02    +0.0000E+00	0.00E+00	0.00E+0
+8
++0.00000E+00  +0.00000E+00	0.00E+00	0.00E+00
++0.00000E+00  +0.00000E+00	0.00E+00	0.00E+00
+-2.19911E+01  +0.00000E+00	0.00E+00	0.00E+00
+-2.19911E+01  +0.00000E+00	0.00E+00	0.00E+00
+-3.51858E+02  +0.00000E+00	0.00E+00	0.00E+00
+-6.05071E+02  +0.00000E+00	0.00E+00	0.00E+00
+-5.21504E+02  -9.60699E+02	0.00E+00	0.00E+00
+-5.21504E+02  +9.60699E+02	0.00E+00	0.00E+00
+ theoretical  3    digitizer    fir                     
+40
+39
+4.189520E-13 0
+3.303180E-04 0
+1.029210E-03 0
+-3.141230E-03 0
+2.057090E-04 0
+1.525210E-03 0
+-6.231930E-03 0
+1.048010E-02 0
+-1.312020E-02 0
+1.078210E-02 0
+-1.444550E-03 0
+-1.587290E-02 0
+3.950740E-02 0
+-6.510360E-02 0
+8.537160E-02 0
+-8.919130E-02 0
+5.006190E-02 0
+8.372330E-01 0
+2.667230E-01 0
+-1.666930E-01 0
+9.528400E-02 0
+-5.092180E-02 0
+1.614580E-02 0
+7.063620E-03 0
+-1.838770E-02 0
+1.994140E-02 0
+-1.548950E-02 0
+8.527350E-03 0
+-2.557890E-03 0
+-1.811030E-03 0
+2.426490E-03 0
+-3.757690E-03 0
+4.672930E-04 0
+6.330720E-04 0
+-1.568740E-06 0
+-1.254800E-05 0
+3.210410E-07 0
+-2.633240E-08 0
+-5.099970E-08 0
+0

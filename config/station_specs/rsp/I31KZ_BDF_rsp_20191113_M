@@ -1,0 +1,124 @@
+# Displacement response for IS31, infrasound channels
+# 
+# Sensor type		= MB3
+# Digitiser type	= Quanterra Q330M+
+# Data sample rate	= 20 s/s
+#
+#----------------------------------------------------
+# The sensitivity of the channel is in average 8153 counts/Pa = 0.00012265 Pa/count
+#   at frequency of 0.25 Hz
+#
+#  stage-1  
+#     Response type:                    		A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	PA - (null)
+#     Response out units lookup:             	V - (null)
+#     A0 normalization factor:               	7.047287E+04
+#     Normalization frequency:               	0.25000E+00
+#     Sensitivity:                           	2.000000E-02
+#     Frequency of sensitivity:              	0.250000E+00
+#
+#  stage-2  
+#     Response type:                         	A [Laplace Transform (Rad/sec)]
+#     Response in units lookup:              	V - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     A0 normalization factor:               	1
+#     Normalization frequency:               	1.000000E+00
+#     Sensitivity:                           	4.194300E+05
+#     Frequency of sensitivity:              	1.000000E+00
+# 
+#  stage-3  
+#     Response type:                         	D
+#     Response in units lookup:              	COUNTS - (null)
+#     Response out units lookup:             	COUNTS - (null)
+#     Response decimation factor:            	1
+#     Response decimation offset:           	0
+#     Response delay:                       	1.700000E+00
+#     Response correction:                  	1.700000E+00
+#     Sensitivity:                           	1.000000E+00
+#     Frequency of sensitivity:              	1.000000E+00
+# 
+# 
+#----------------------------------------------------
+# Stages for WNRS response (measuring channels) and hose / pipe (reference channels) to be added
+
+ theoretical  1  instrument   paz    DASE
+7.047287E+04
+4
+-6.2834000E-02	 0.00E+00	0.00E+00  0.00E+00
+-1.5625000E+02	 0.00E+00	0.00E+00  0.00E+00
+-1.4212200E+02	 7.0619300E+02	0.00E+00  0.00E+00
+-1.4212200E+02	-7.0619300E+02	0.00E+00  0.00E+00
+2
+-1.1562500E+03  0.00E+00     0.00E+00   0.00E+00
+0.00E+00	0.00E+00     0.00E+00   0.00E+00
+ theoretical  3    digitizer    fir
+20
+67
+3.7716220E-17	0.00E+00
+-1.6971263E-10	0.00E+00
+1.7183769E-08	0.00E+00
+-2.4396441E-07	0.00E+00
+2.5825193E-07	0.00E+00
+1.5608987E-06	0.00E+00
+-1.8170374E-06	0.00E+00
+2.4137647E-06	0.00E+00
+-3.7049074E-06	0.00E+00
+8.7327567E-07	0.00E+00
+3.6423511E-05	0.00E+00
+-2.4683311E-04	0.00E+00
+-3.9359882E-04	0.00E+00
+6.5596116E-04	0.00E+00
+-1.0202520E-03	0.00E+00
+1.2305107E-03	0.00E+00
+-1.0604299E-03	0.00E+00
+2.8861329E-04	0.00E+00
+1.2268313E-03	0.00E+00
+-3.4585489E-03	0.00E+00
+6.1462784E-03	0.00E+00
+-8.7582095E-03	0.00E+00
+1.0517854E-02	0.00E+00
+-1.0495466E-02	0.00E+00
+7.7688228E-03	0.00E+00
+-1.6282018E-03	0.00E+00
+-7.6409597E-03	0.00E+00
+1.9894414E-02	0.00E+00
+-3.8761941E-02	0.00E+00
+5.5104411E-02	0.00E+00
+-7.1369635E-02	0.00E+00
+8.3303570E-02	0.00E+00
+-8.6719458E-02	0.00E+00
+6.2876883E-02	0.00E+00
+8.8995076E-01	0.00E+00
+1.6700170E-01	0.00E+00
+-1.2868654E-01	0.00E+00
+1.0072625E-01	0.00E+00
+-7.5500737E-02	0.00E+00
+5.1595197E-02	0.00E+00
+-3.1114641E-02	0.00E+00
+1.1006032E-02	0.00E+00
+4.7617321E-04	0.00E+00
+-8.2388155E-03	0.00E+00
+1.2421118E-02	0.00E+00
+-1.3133279E-02	0.00E+00
+1.1441660E-02	0.00E+00
+-8.4523488E-03	0.00E+00
+5.1364373E-03	0.00E+00
+-2.2056665E-03	0.00E+00
+6.4757742E-05	0.00E+00
+1.1723495E-03	0.00E+00
+-1.6096229E-03	0.00E+00
+1.4835919E-03	0.00E+00
+-1.0652902E-03	0.00E+00
+5.9053200E-04	0.00E+00
+-2.7357644E-04	0.00E+00
+-3.2148402E-04	0.00E+00
+3.9851542E-05	0.00E+00
+1.0833027E-06	0.00E+00
+-4.6429730E-06	0.00E+00
+2.8844792E-06	0.00E+00
+-1.6208104E-06	0.00E+00
+1.3161658E-06	0.00E+00
+4.7251905E-07	0.00E+00
+-3.2963658E-07	0.00E+00
+2.7142341E-08	0.00E+00
+0

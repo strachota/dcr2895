@@ -1,0 +1,21 @@
+# CCASEID: @(#) MMAI.par /main/R3_tst/3  10/09/2007
+# MMAI.par
+
+# For StaPro
+#
+noise-fkqual-fstat="4.0,3.0"
+min-teleseismic-velocity=9.4
+noise-mbsnr=2.0
+
+# For DFX
+#
+NetType=array
+StaType=3c
+
+#  For DFX-evch used in splp computations
+BandType1=s
+BandType3=b
+
+tf-vert-chan=BHZ
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=BHZ,BH1,BH2

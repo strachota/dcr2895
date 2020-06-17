@@ -1,0 +1,16 @@
+#
+# This is a DISPLACEMENT response corresponding to a
+# velocity-proportional, flat response between 120 sec and ~40 Hz
+# Nominal velocity calibration:  1.67  nm/s per count
+#
+# Generic response derived from GRSN_bb.1 (Streckeisen STS-2)
+#
+ theoretical  0   instrument    paz Generic
+0.600001
+2
+-3.7314534E-02   3.6173433E-02  0.0  0.0
+-3.7314534E-02  -3.6173433E-02  0.0  0.0
+3
+0.0  0.0  0.0  0.0
+0.0  0.0  0.0  0.0
+0.0  0.0  0.0  0.0

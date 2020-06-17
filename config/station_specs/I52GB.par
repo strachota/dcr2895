@@ -1,0 +1,11 @@
+# CCASEID: @(#) I52GB.par /main/R3_tst/1  11/13/2003
+
+# For StaPro
+#
+StaPro-statype=infra
+StaPro-do-loc-mag=0
+
+##  For DFX
+WaveType=infra-
+NetType=array
+StaType=1c

@@ -1,0 +1,97 @@
+# Instrument response: channel I56H1_BDF
+#
+# MB2005 INFRASONIC MICROBAROMETER SENSOR
+#
+# MB2005 microbarometer sensor response based on information 
+# provided by  DASE.
+# Response in poles and zeros for  the differential 
+# (0.01 to 27 Hz)output from the MB2005 sensor.
+#
+# source=theoretical sequence=1 description=microbarometer  
+# type=paz information=DASE
+#
+# Listed fields:
+#
+# The value of A0 listed before the poles 
+# normalizes the response to unity. Response 
+# should be multiplied by 0.02 to give MB2005 response in Volts/Pa.
+#
+# The number of poles, their Real part, Imaginary part and errors 
+# are listed.
+#
+# The number of zeros, their Real part, Imaginary part and errors 
+# are listed under the poles.
+#
+#
+# SMART-24 Geotech DIGITIZER 
+#
+# Calibration data for SMART-24
+# Phase is given in degrees
+# The pre-amp delay time was experimentally determined
+# to be 0.000067 seconds.
+# the linear phase shift (in radians) is -2pi*t0*f, t0=0.000067 sec
+# Normalization factor was determined at 1 Hz.
+#
+#   Calibration is accurate to within less than 1.5%.
+#
+#   Digitizer sensitivity: 
+#   Nominal LSB   1.635548 µvolt/count 
+#
+#	Digitizer sensitivity: 
+#   L1      1.641776 µvolt/count (609096 counts/volt)
+#   L2      1.63698  µvolt/count (610881 counts/volt)
+#   L3      1.635588 µvolt/count (611401 counts/volt)
+#   L4      1.636688 µvolt/count (610990 counts/volt)
+#   L5      1.63732  µvolt/count (610754 counts/volt)
+#   L6      1.638288 µvolt/count (610393 counts/volt)
+#   L7      1.642268 µvolt/count (608914 counts/volt)
+#   L8      1.64354  µvolt/count (608443 counts/volt)
+#
+#  Measured response 20 Hz sampling rate
+#  Number of fap=29
+# 
+# type=fap information=GEOTECH
+#
+# Listed fields:
+# Frequency  Amplitude Phase(deg) 	AmEr 	   	PhEr#    
+#
+theoretical	1	microbarometer	paz	DASE
+1.3162E+07
+4
+-1.77700000E+02	-1.77700000E+02    0.00000000E+00  0.00000000E+00
+-1.77700000E+02	+1.77700000E+02    0.00000000E+00  0.00000000E+00
+-6.28000000E-02	 0.00000000E+00    0.00000000E+00  0.00000000E+00
+-2.07345000E+02	 0.00000000E+00	   0.00000000E+00  0.00000000E+00
+1
+0.00000000E+00  0.00000000E+00     0.00000000E+00   0.00000000E+00
+    measured  	  2    	 digitizer    fap     	SMART-24
+29
+ .010000             1.002305      -.000241         .000000       .000000
+ .040000             1.002305      -.000965         .000000       .000000
+ .080000             1.016249      -.001930         .000000       .000000
+ .120000              .994260      -.002894         .000000       .000000
+ .200000              .986280      -.004824         .000000       .000000
+ .350000              .996552      -.008442         .000000       .000000
+ .430000              .997700      -.010372         .000000       .000000
+ .510000              .990832      -.012301         .000000       .000000
+ .590000              .978363      -.014231         .000000       .000000
+ .700000              .968278      -.016884         .000000       .000000
+ .820000              .972747      -.019778         .000000       .000000
+ .900000              .982879      -.021708         .000000       .000000
+1.000000             1.000000      -.024120         .000000       .000000
+1.520000              .995405      -.036662         .000000       .000000
+1.990000              .980618      -.047999         .000000       .000000
+3.010000              .997700      -.072601         .000000       .000000
+4.020000             1.010416      -.096962         .000000       .000000
+5.000000              .970510      -.120600         .000000       .000000
+6.020000             1.016249      -.145202         .000000       .000000
+6.990000              .986280      -.168599         .000000       .000000
+8.010000             1.006932      -.193201         .000000       .000000
+8.240000              .920449      -.198749         .000000       .000000
+8.520000              .764715      -.205502         .000000       .000000
+8.750000              .521195      -.211050         .000000       .000000
+9.020000              .186423      -.217562         .000000       .000000
+9.260000              .053150      -.223351         .000000       .000000
+9.490000              .007396      -.228899         .000000       .000000
+9.730000              .000458      -.234688         .000000       .000000
+10.00000              .000055      -.241200         .000000       .000000

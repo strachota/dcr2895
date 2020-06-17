@@ -1,0 +1,12 @@
+# CCASEID: @(#) I57US.par /main/R3_tst/1  07/29/2002
+# %W% %G%
+
+# For StaPro
+#
+StaPro-statype=infra
+StaPro-do-loc-mag=0
+
+##  For DFX
+WaveType=infra-
+NetType=array
+StaType=1c

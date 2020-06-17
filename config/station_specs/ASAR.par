@@ -1,0 +1,15 @@
+# CCASEID: @(#) ASAR.par /main/R3_tst/4  09/20/2006
+# %W% %G%
+
+# For StaPro
+#
+NetType=array
+StaType=1c
+BandType1=b
+BandType3=b
+min-teleseismic-velocity=9.4
+noise-fkqual-fstat="4.0,3.0"
+#Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=BHZ,BHN,BHE
+tf-vert-chan=SHZ
+noise-mbsnr=1.4

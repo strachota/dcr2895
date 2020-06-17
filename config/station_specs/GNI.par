@@ -1,0 +1,20 @@
+# CCASEID: @(#) GNI.par /main/R3_tst/tst/1  12/02/2010
+# GNI.par
+
+# For DFX
+#
+NetType=ss
+StaType=3c
+amp3c-sta=$(sta)
+amp3c-chan-list="'BHZ','BHE','BHN'"
+
+#  For DFX-evch used in splp computations
+BandType1=b
+BandType3=b
+
+tf-vert-chan=BHZ
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=BHZ,BHN,BHE
+
+# For StaPro
+noise-mbsnr=2.0

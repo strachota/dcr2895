@@ -1,0 +1,20 @@
+# CCASEID: @(#) PCRV.par /main/R3_tst/3  08/26/2009
+# PCRV.par
+
+# For DFX
+#
+NetType=ss
+StaType=3c
+amp3c-sta=$(sta)
+amp3c-chan-list="'HHZ','HH2','HH1'"
+
+#  For DFX-evch used in splp computations
+BandType1=b
+BandType3=b
+
+tf-vert-chan=HHZ
+##Chans MUST be in order of VERT, NORTH, EAST
+tf-3c-chans=HHZ,HH1,HH2
+
+# For StaPro
+noise-mbsnr=2.0
